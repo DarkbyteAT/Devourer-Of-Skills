@@ -13,15 +13,14 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.BufferUtils;
+import com.badlogic.gdx.utils.Disposable;
 import com.badlogic.gdx.utils.ScreenUtils;
 import com.kotcrab.vis.ui.VisUI;
 
-import net.atlne.dos.Core;
-import net.atlne.dos.Manager;
 import net.atlne.dos.graphics.text.FontLoader;
 import net.atlne.dos.graphics.textures.TextureLoader;
 
-public class GraphicsManager extends Manager {
+public class GraphicsManager implements Disposable {
 	
 	/**Stores the pixels-per-meter conversion for rendering.*/
 	public static final float PPM = 32;
@@ -33,10 +32,9 @@ public class GraphicsManager extends Manager {
 
 	/**Constructor for the GraphicsManager, initialises the VisUI library. <br>
 	 * Also initialises the camera  for the game's scaling.*/
-	public GraphicsManager(Core core) {
-		super(core);
+	public GraphicsManager() {
 		fonts = new FontLoader("assets/fonts/standard.ttf");
-		textures = new TextureLoader(core);
+		textures = new TextureLoader();
 		
 		/**Loads the VisUI library.
 		 * Sets the title alignment for windows to the centre.

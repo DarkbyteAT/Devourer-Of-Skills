@@ -5,11 +5,9 @@ import java.util.concurrent.ConcurrentHashMap;
 import com.badlogic.gdx.assets.loaders.resolvers.LocalFileHandleResolver;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
+import com.badlogic.gdx.utils.Disposable;
 
-import net.atlne.dos.Core;
-import net.atlne.dos.Manager;
-
-public class MapLoader extends Manager {
+public class MapLoader implements Disposable {
 	
 	/**Stores the rectangle shape for collision and impasse tiles.*/
 	private PolygonShape tileShape;
@@ -18,8 +16,7 @@ public class MapLoader extends Manager {
 	/**Stores the loaded maps for the game.*/
 	private ConcurrentHashMap<String, Map> maps = new ConcurrentHashMap<String, Map>();
 	
-	public MapLoader(Core core) {
-		super(core);
+	public MapLoader() {
 		tileShape = new PolygonShape();
 		tileShape.setAsBox(0.5f, 0.5f);
 	}
@@ -35,7 +32,7 @@ public class MapLoader extends Manager {
 	/**Loads a map into the game, or gets the map from the HashMap if already loaded, and returns it.*/
 	public Map get(String mapName) {
 		if(!maps.containsKey(mapName))
-			maps.put(mapName, new Map(core, mapLoader.load("assets/maps/" + mapName + ".tmx")));
+			maps.put(mapName, new Map(mapLoader.load("assets/maps/" + mapName + ".tmx")));
 		return maps.get(mapName);
 	}
 	

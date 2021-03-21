@@ -40,8 +40,6 @@ public class Room {
 	/**Stores the colour to draw grid lines in debug mode.*/
 	public static final Color GRID_COLOUR = new Color(0.3f, 0.3f, 0.3f, 0.3f);
 	
-	/**Stores an instance of the core class.*/
-	protected Core core;
 	/**Stores the map for the room.*/
 	protected Map map;
 	/**Stores the renderer for the tile map.*/
@@ -79,9 +77,8 @@ public class Room {
 	/**Stores the number of ticks counted in a second.*/
 	protected int tpsCount;
 
-	public Room(Core core, String mapName) {
-		this.core = core;
-		this.map = core.getMaps().get(mapName);
+	public Room(String mapName) {
+		this.map = Core.maps.get(mapName);
 		this.mapRenderer = new OrthogonalTiledMapRenderer(map.getTileMap());
 		this.camera = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 		this.cameraPos = new Vector2();
@@ -147,17 +144,15 @@ public class Room {
 		rayHandler.updateAndRender();
 		
 		/**Draws the hitboxes and grid if the debug overlay is open.*/
-		if(core.getDebugOverlay().isActive()) {
-			Vector3 originalCameraPos = camera.position.cpy();
-			camera.position.set(cameraPos.cpy(), 0);
-			camera.zoom /= GraphicsManager.PPM;
-			camera.update();
-			drawGrid();
-			debugRenderer.render(world, camera.combined);
-			camera.zoom *= GraphicsManager.PPM;
-			camera.position.set(originalCameraPos);
-			camera.update();
-		}
+		Vector3 originalCameraPos = camera.position.cpy();
+		camera.position.set(cameraPos.cpy(), 0);
+		camera.zoom /= GraphicsManager.PPM;
+		camera.update();
+		drawGrid();
+		debugRenderer.render(world, camera.combined);
+		camera.zoom *= GraphicsManager.PPM;
+		camera.position.set(originalCameraPos);
+		camera.update();
 		
 		/**Resets the parameters to continue rendering on the batch normally.*/
 		camera.zoom = zoom;
@@ -219,11 +214,11 @@ public class Room {
 		}
 		
 		/**Adds measurements to debug menu if open.*/
-		if(core.getDebugOverlay().isActive()) {
-			core.getDebugOverlay().getDebugPanes().put("TPS", Integer.toString(tps));
-			core.getDebugOverlay().getDebugPanes().put("Camera Zoom", Float.toString(camera.zoom));
-			core.getDebugOverlay().getDebugPanes().put("In-Game Time", Float.toString(time));
-			core.getDebugOverlay().getDebugPanes().put("Ambient Light", Float.toString(ambientLight));
+		if(Core.debug.isActive()) {
+			Core.debug.getDebugPanes().put("TPS", Integer.toString(tps));
+			Core.debug.getDebugPanes().put("Camera Zoom", Float.toString(camera.zoom));
+			Core.debug.getDebugPanes().put("In-Game Time", Float.toString(time));
+			Core.debug.getDebugPanes().put("Ambient Light", Float.toString(ambientLight));
 		}
 	}
 	

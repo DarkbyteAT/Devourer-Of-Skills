@@ -12,7 +12,6 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.NinePatch;
 import com.badlogic.gdx.utils.Disposable;
 
-import net.atlne.dos.Core;
 import net.atlne.dos.graphics.textures.animation.spritesheet.SpriteSheetLoader;
 
 public class TextureLoader implements Disposable {
@@ -28,8 +27,8 @@ public class TextureLoader implements Disposable {
 	private ConcurrentHashMap<String, NinePatch> ninePatches;
 	
 	/**Constructor for the texture loader, initialises the maps.*/
-	public TextureLoader(Core core) {
-		spriteSheets = new SpriteSheetLoader(core);
+	public TextureLoader() {
+		spriteSheets = new SpriteSheetLoader();
 		textures = new ConcurrentHashMap<String, Texture>();
 		cursors = new ConcurrentHashMap<String, Cursor>();
 		ninePatches = new ConcurrentHashMap<String, NinePatch>();

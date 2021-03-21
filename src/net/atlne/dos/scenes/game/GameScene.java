@@ -33,11 +33,11 @@ public class GameScene extends Scene {
 	/**Stores the pause screen buffer.*/
 	private TextureRegion pauseBuffer;
 	
-	public GameScene(Core core) {
-		super(core, true);
-		Gdx.graphics.setCursor(core.getGraphics().getTextures().getCursor("assets/textures/cursors/crosshair.png", 16, 16));
+	public GameScene() {
+		super(true);
+		Gdx.graphics.setCursor(Core.graphics.getTextures().getCursor("assets/textures/cursors/crosshair.png", 16, 16));
 		
-		this.room = new Room(core, "start-town");
+		this.room = new Room("start-town");
 		this.obj = new PhysicsObject[1];
 		
 		for(int i = 0; i < this.obj.length; i++) {
@@ -51,8 +51,8 @@ public class GameScene extends Scene {
 			this.obj[i].getBody().setFixedRotation(true);
 			this.obj[i].setPosition(new Vector2(9, 22));
 			StateAnimatedSprite objSprite = new StateAnimatedSprite("idle-right",
-					core.getGraphics().getTextures().getSpriteSheets().get("assets/textures/characters/human/sheet.cfg",
-							core.getJson().get("test/replacement.json", new TypeToken<HashMap<String, String>>(){}.getType())));
+					Core.graphics.getTextures().getSpriteSheets().get("assets/textures/characters/human/sheet.cfg",
+							Core.json.get("test/replacement.json", new TypeToken<HashMap<String, String>>(){}.getType())));
 			objSprite.setSize(GraphicsManager.PPM * 1.5f, GraphicsManager.PPM * (4f/3f));
 			objSprite.setPosition(-GraphicsManager.PPM / 1.33f, (-GraphicsManager.PPM / 2) + 4);
 			
@@ -64,28 +64,28 @@ public class GameScene extends Scene {
 					if(I == 0) {
 						boolean moved = false;
 						
-						if(core.getInput().bindPressed("up")) {
+						if(Core.input.bindPressed("up")) {
 							setDirection(Direction.UP);
 							body.applyForce(1000, direction.toAngle());
 							setState("walk");
 							moved = true;
 						}
 						
-						if(core.getInput().bindPressed("down")) {
+						if(Core.input.bindPressed("down")) {
 							setDirection(Direction.DOWN);
 							body.applyForce(1000, direction.toAngle());
 							setState("walk");
 							moved = true;
 						}
 						
-						if(core.getInput().bindPressed("left")) {
+						if(Core.input.bindPressed("left")) {
 							setDirection(Direction.LEFT);
 							body.applyForce(1000, direction.toAngle());
 							setState("walk");
 							moved = true;
 						}
 						
-						if(core.getInput().bindPressed("right")) {
+						if(Core.input.bindPressed("right")) {
 							setDirection(Direction.RIGHT);
 							body.applyForce(1000, direction.toAngle());
 							setState("walk");
@@ -118,16 +118,16 @@ public class GameScene extends Scene {
 	public void draw() {
 		super.draw();
 		
-		 if(core.getScenes().getSceneStack().peek() == this) {
+		 if(Core.scenes.getSceneStack().peek() == this) {
 			room.getCameraPos().set(room.getEntities().get("test-0").getBody().getPosition());
 			batch.begin();
 			room.draw(batch);
 			batch.end();
 			
-			if(core.getInput().keyJustPressed(Keys.ESCAPE)) {
+			if(Core.input.keyJustPressed(Keys.ESCAPE)) {
 				if(pauseBuffer != null)
 					pauseBuffer.getTexture().dispose();
-				pauseBuffer = core.getGraphics().screen();
+				pauseBuffer = Core.graphics.screen();
 			}
 		} else {
 			batch.begin();
@@ -141,9 +141,9 @@ public class GameScene extends Scene {
 	public void act() {
 		super.act();
 		
-		if(core.getInput().keyJustPressed(Keys.ESCAPE)) {
-			core.getScenes().pushScene(new PauseScene(core));
-		} else if(core.getScenes().getSceneStack().peek() == this) {
+		if(Core.input.keyJustPressed(Keys.ESCAPE)) {
+			Core.scenes.pushScene(new PauseScene());
+		} else if(Core.scenes.getSceneStack().peek() == this) {
 			room.update();
 		}
 	}

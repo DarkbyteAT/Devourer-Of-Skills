@@ -34,12 +34,12 @@ public class AudioSettingsTab extends Tab {
 	/**Stores the SFX volume.*/
 	private float sfxVolume;
 
-	public AudioSettingsTab(Core core) {
+	public AudioSettingsTab() {
 		super(false, false);
 		table = new VisTable();
-		masterVolume = core.getAudio().getMasterVolume();
-		musicVolume = core.getAudio().getMusicVolume();
-		sfxVolume = core.getAudio().getSFXVolume();
+		masterVolume = Core.audio.getMasterVolume();
+		musicVolume = Core.audio.getMusicVolume();
+		sfxVolume = Core.audio.getSFXVolume();
 		masterVolumeLabel = new VisLabel("Master Volume: " + (int) (100 * RoundingUtils.roundTo(masterVolume, 2)) + "%");
 		musicVolumeLabel = new VisLabel("Music Volume: " + (int) (100 * RoundingUtils.roundTo(musicVolume, 2)) + "%");
 		sfxVolumeLabel = new VisLabel("SFX Volume: " + (int) (100 * RoundingUtils.roundTo(sfxVolume, 2)) + "%");
@@ -55,7 +55,7 @@ public class AudioSettingsTab extends Tab {
 			public void changed(ChangeEvent e, Actor actor) {
 				masterVolume = masterVolumeSlider.getValue();
 				masterVolumeLabel.setText("Master Volume: " + (int) (100 * RoundingUtils.roundTo(masterVolume, 2)) + "%");
-				core.getAudio().setMasterVolume(masterVolume);
+				Core.audio.setMasterVolume(masterVolume);
 			}
 		});
 		
@@ -64,7 +64,7 @@ public class AudioSettingsTab extends Tab {
 			public void changed(ChangeEvent e, Actor actor) {
 				musicVolume = musicVolumeSlider.getValue();
 				musicVolumeLabel.setText("Music Volume: " + (int) (100 * RoundingUtils.roundTo(musicVolume, 2)) + "%");
-				core.getAudio().setMusicVolume(musicVolume);
+				Core.audio.setMusicVolume(musicVolume);
 			}
 		});
 		
@@ -73,7 +73,7 @@ public class AudioSettingsTab extends Tab {
 			public void changed(ChangeEvent e, Actor actor) {
 				sfxVolume = sfxVolumeSlider.getValue();
 				sfxVolumeLabel.setText("SFX Volume: " + (int) (100 * RoundingUtils.roundTo(sfxVolume, 2)) + "%");
-				core.getAudio().setSFXVolume(sfxVolume);
+				Core.audio.setSFXVolume(sfxVolume);
 			}
 		});
 		

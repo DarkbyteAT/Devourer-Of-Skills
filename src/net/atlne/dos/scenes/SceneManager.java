@@ -1,17 +1,16 @@
 package net.atlne.dos.scenes;
 
 import java.util.LinkedList;
-import java.util.Optional;
 import java.util.Queue;
 import java.util.Stack;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.utils.Disposable;
 
 import net.atlne.dos.Core;
-import net.atlne.dos.Manager;
 
-public class SceneManager extends Manager {
+public class SceneManager implements Disposable {
 	
 	/**Stores the scenes active in the game in a stack.*/
 	private Stack<Scene> scenes = new Stack<Scene>();
@@ -22,9 +21,8 @@ public class SceneManager extends Manager {
 	/**Stores the foreground scene used for displaying errors.*/
 	private Scene errorScene;
 
-	public SceneManager(Core core) {
-		super(core);
-		errorScene = new Scene(core, true);
+	public SceneManager() {
+		errorScene = new Scene(true);
 	}
 
 	/**Disposes of all scenes in the stack as well as the error scene.*/
@@ -73,7 +71,7 @@ public class SceneManager extends Manager {
 			Scene scene = tempStack.pop();
 			scene.getBatch().setProjectionMatrix(scene.getCamera().combined);
 			scene.getCamera().update();
-			core.getInput().setInputScene(scene);
+			Core.input.setInputScene(scene);
 			scene.act();
 			scene.draw();
 		}
@@ -82,7 +80,7 @@ public class SceneManager extends Manager {
 		if(errorSceneActive)
 			errorScene.draw();
 		/**Resets input polling restrictions.*/
-		core.getInput().resetInputScene();
+		Core.input.resetInputScene();
 	}
 	
 	/**Resizes all scenes in the game.*/
@@ -110,10 +108,11 @@ public class SceneManager extends Manager {
 	}
 	
 	public Scene peekScene(Class<?> scene) {
-		Optional<Scene> maybeScene = scenes.stream()
+		Scene foundScene = scenes.stream()
 				.filter(s -> s.getClass().equals(scene))
-				.findFirst();
-		return maybeScene.isPresent() ? maybeScene.get() : null;
+				.findFirst()
+				.orElse(null);
+		return foundScene;
 	}
 
 	public Stack<Scene> getSceneStack() {

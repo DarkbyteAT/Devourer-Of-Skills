@@ -7,12 +7,8 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
 
-import net.atlne.dos.Core;
-
 public class Scene extends Stage {
 	
-	/**Stores an instance of the core class.*/
-	protected Core core;
 	/**Stores the SpriteBatch for the scene.*/
 	protected SpriteBatch batch;
 	/**Stores whether the previous scene should be displayed underneath this scene or not.*/
@@ -22,9 +18,8 @@ public class Scene extends Stage {
 	protected boolean disposed;
 	
 	/**Constructor for the Scene class, takes in the core class instance.*/
-	public Scene(Core core, boolean displayUnder) {
+	public Scene(boolean displayUnder) {
 		super(new ScreenViewport(new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight())), new SpriteBatch());
-		this.core = core;
 		this.batch = (SpriteBatch) getBatch();
 		this.displayUnder = displayUnder;
 	}
@@ -53,10 +48,6 @@ public class Scene extends Stage {
 	public void addActor(Actor actor, float width, float height) {
 		actor.setPosition(getWidth() * (width / 100f), getHeight() * (height / 100f));
 		super.addActor(actor);
-	}
-	
-	public Core getCore() {
-		return core;
 	}
 	
 	@Override

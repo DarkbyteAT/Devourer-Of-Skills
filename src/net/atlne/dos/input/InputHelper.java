@@ -8,14 +8,14 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.utils.Disposable;
 import com.google.gson.reflect.TypeToken;
 
 import net.atlne.dos.Core;
-import net.atlne.dos.Manager;
 import net.atlne.dos.scenes.Scene;
 import net.atlne.dos.utils.maths.HAMaths.ProjectionUtils;
 
-public class InputHelper extends Manager {
+public class InputHelper implements Disposable {
 	
 	/**Stores the max duration a double press or click can be delayed by.*/
 	public static final long DOUBLE_DELAY = 100;
@@ -33,16 +33,14 @@ public class InputHelper extends Manager {
 	/**Stores the currently bound scene for input polling.*/
 	private Scene inputScene;
 	
-	public InputHelper(Core core) {
-		super(core);
-		
+	public InputHelper() {
 		if(!Gdx.files.local("config/binds.json").exists()) {
 			if(!Gdx.files.local("config").exists()) Gdx.files.local("config").mkdirs();
 			Gdx.files.local("config/binds.json")
 				.writeString(Gdx.files.internal("net/atlne/dos/input/default-binds.json").readString(), false);
 		}
 		
-		binds = core.getJson().get("config/binds.json", new TypeToken<LinkedHashMap<String, Integer>>(){}.getType());
+		binds = Core.json.get("config/binds.json", new TypeToken<LinkedHashMap<String, Integer>>(){}.getType());
 		stringKeys = new HashMap<String, Integer>();
 		keyStrings = new HashMap<Integer, String>();
 		clickDuration = new int[16];
@@ -67,7 +65,7 @@ public class InputHelper extends Manager {
 	public void dispose() {
 		if(!Gdx.files.local("config").exists())
 			Gdx.files.local("config").mkdirs();
-		core.getJson().set("config/binds.json", binds);
+		Core.json.set("config/binds.json", binds);
 	}
 	
 	public void update() {

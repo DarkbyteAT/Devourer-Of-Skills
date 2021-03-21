@@ -34,13 +34,13 @@ public class MenuScene extends Scene {
 	/**Stores the settings window.*/
 	private SettingsWindow settingsWindow;
 
-	public MenuScene(Core core) {
-		super(core, false);
+	public MenuScene() {
+		super(false);
 		
-		title = new SceneTitle(core, TITLE);
+		title = new SceneTitle(TITLE);
 		table = new VisTable();
-		characterSelectionWindow = new CharacterSelectionWindow(core);
-		settingsWindow = new SettingsWindow(core);
+		characterSelectionWindow = new CharacterSelectionWindow();
+		settingsWindow = new SettingsWindow();
 		characterSelectionWindow.centerWindow();
 		settingsWindow.centerWindow();
 		
@@ -48,8 +48,8 @@ public class MenuScene extends Scene {
 			@Override
 			public void changed(ChangeEvent e, Actor actor) {
 				//addActor(characterSelectionWindow);
-				core.getScenes().popScene();
-				core.getScenes().pushScene(new GameScene(core));
+				Core.scenes.popScene();
+				Core.scenes.pushScene(new GameScene());
 				dispose();
 			}
 		});
@@ -88,7 +88,7 @@ public class MenuScene extends Scene {
 	/**Draws the title text at the top of the screen.*/
 	@Override
 	public void draw() {
-		core.getAudio().playMusic("menu");
+		Core.audio.playMusic("menu");
 		super.draw();
 	}
 	

@@ -14,8 +14,6 @@ import net.atlne.dos.utils.text.HAStrings;
 
 public class ControlSettingsTab extends Tab {
 	
-	/**Stores the core class instance.*/
-	private Core core;
 	/**Stores the table for the tab.*/
 	private VisTable table;
 	/**Stores the table for arranging the elements.*/
@@ -33,24 +31,23 @@ public class ControlSettingsTab extends Tab {
 	 * -1 is stored when the bind index is nothing.*/
 	private int bindIndex = -1;
 
-	public ControlSettingsTab(Core core) {
+	public ControlSettingsTab() {
 		super(false, false);
-		this.core = core;
 		table = new VisTable();
 		contentTable = new VisTable();
 		scrollPane = new VisScrollPane(contentTable);
 		bindTable = new BindFindTable(this);
-		bindLabels = new VisLabel[core.getInput().getBinds().size()];
+		bindLabels = new VisLabel[Core.input.getBinds().size()];
 		bindButtons = new VisTextButton[bindLabels.length];
 		
 		for(int i = 0; i < bindLabels.length; i++) {
 			final int INDEX = i;
-			int bind = core.getInput().getBinds().get(core.getInput().getBinds().keySet().toArray()[i]);
-			bindLabels[i] = new VisLabel(HAStrings.dashToCapitalisedDisplay(core.getInput().getBinds().keySet().toArray()[i].toString()) + ": ");
+			int bind = Core.input.getBinds().get(Core.input.getBinds().keySet().toArray()[i]);
+			bindLabels[i] = new VisLabel(HAStrings.dashToCapitalisedDisplay(Core.input.getBinds().keySet().toArray()[i].toString()) + ": ");
 			
 			/**Determines the bind key from the bind code, if negative, converts to mouse buttons.
 			 * Sets the current bind key to this bind button's index.*/
-			bindButtons[i] = new VisTextButton(bind < 0 ? "MOUSE" + (-(bind + 1)) : core.getInput().getKeyName(bind),
+			bindButtons[i] = new VisTextButton(bind < 0 ? "MOUSE" + (-(bind + 1)) : Core.input.getKeyName(bind),
 					new ChangeListener() {
 						@Override
 						public void changed(ChangeEvent e, Actor actor) {
@@ -76,10 +73,6 @@ public class ControlSettingsTab extends Tab {
 	@Override
 	public String getTabTitle() {
 		return "Controls";
-	}
-	
-	public Core getCore() {
-		return core;
 	}
 	
 	public VisLabel[] getBindLabels() {
@@ -115,17 +108,17 @@ class BindFindTable extends VisTable {
 		/**Checks if there's an active bind selection.*/
 		if(tab.getBindIndex() != -1) {
 			/**Checks for any pressed keys.*/
-			if(tab.getCore().getInput().getKeysJustPressed().size() > 0) {
-				tab.getBindButtons()[tab.getBindIndex()].setText(tab.getCore().getInput().getKeyName(tab.getCore().getInput().getKeysJustPressed().get(0)));
-				tab.getCore().getInput().getBinds().put(tab.getCore().getInput().getBinds().keySet().toArray()[tab.getBindIndex()].toString(),
-						tab.getCore().getInput().getKeysJustPressed().get(0));
+			if(Core.input.getKeysJustPressed().size() > 0) {
+				tab.getBindButtons()[tab.getBindIndex()].setText(Core.input.getKeyName(Core.input.getKeysJustPressed().get(0)));
+				Core.input.getBinds().put(Core.input.getBinds().keySet().toArray()[tab.getBindIndex()].toString(),
+						Core.input.getKeysJustPressed().get(0));
 				tab.setBindIndex(-1);
 			} else {
 				/**Checks for any pressed mouse buttons.*/
 				for(int i = 0; i < 16; i++) {
-					if(tab.getCore().getInput().justClicked(i)) {
+					if(Core.input.justClicked(i)) {
 						tab.getBindButtons()[tab.getBindIndex()].setText("MOUSE" + i);
-						tab.getCore().getInput().getBinds().put(tab.getCore().getInput().getBinds().keySet().toArray()[tab.getBindIndex()].toString(), -(i + 1));
+						Core.input.getBinds().put(Core.input.getBinds().keySet().toArray()[tab.getBindIndex()].toString(), -(i + 1));
 						tab.setBindIndex(-1);
 						break;
 					}

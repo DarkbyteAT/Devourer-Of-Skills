@@ -23,8 +23,6 @@ import net.atlne.dos.maps.objects.LightSource;
 
 public class Map {
 	
-	/**Stores an instance of the Core class.*/
-	protected Core core;
 	/**Stores the tile map to render.*/
 	protected TiledMap tileMap;
 	
@@ -52,8 +50,7 @@ public class Map {
 	/**Stores the reference objects within the map, mapped to their names.*/
 	protected ConcurrentHashMap<String, MapObject> referenceObjects = new ConcurrentHashMap<>();
 
-	public Map(Core core, TiledMap tileMap) {
-		this.core = core;
+	public Map(TiledMap tileMap) {
 		this.tileMap = tileMap;
 		
 		/**Stores vectors of all background and foreground layers.*/
@@ -118,13 +115,13 @@ public class Map {
 		
 		/**Iterates over the edges of the map and adds borders.*/
 		for(int x = 0; x <= width; x++) {
-			(outside ? impasseTiles : collisionTiles).add(new CollisionTile(new Vector2(x + 0.5f, -0.5f), 0, core.getMaps().getTileShape(), outside));
-			(outside ? impasseTiles : collisionTiles).add(new CollisionTile(new Vector2(x + 0.5f, height + 0.5f), 0, core.getMaps().getTileShape(), outside));
+			(outside ? impasseTiles : collisionTiles).add(new CollisionTile(new Vector2(x + 0.5f, -0.5f), 0, Core.maps.getTileShape(), outside));
+			(outside ? impasseTiles : collisionTiles).add(new CollisionTile(new Vector2(x + 0.5f, height + 0.5f), 0, Core.maps.getTileShape(), outside));
 		}
 		
 		for(int y = 0; y <= height; y++) {
-			(outside ? impasseTiles : collisionTiles).add(new CollisionTile(new Vector2(-0.5f, y + 0.5f), 0, core.getMaps().getTileShape(), outside));
-			(outside ? impasseTiles : collisionTiles).add(new CollisionTile(new Vector2(width + 0.5f, y + 0.5f), 0, core.getMaps().getTileShape(), outside));
+			(outside ? impasseTiles : collisionTiles).add(new CollisionTile(new Vector2(-0.5f, y + 0.5f), 0, Core.maps.getTileShape(), outside));
+			(outside ? impasseTiles : collisionTiles).add(new CollisionTile(new Vector2(width + 0.5f, y + 0.5f), 0, Core.maps.getTileShape(), outside));
 		}
 		
 		/**Initialises the background and foreground arrays.*/
@@ -182,12 +179,12 @@ public class Map {
 									position  = rect.getPosition(new Vector2()),
 									center = new Vector2(position.x + (size.x / 2), position.y + (size.y / 2))
 														.scl(1 / GraphicsManager.PPM).add(x, y);
-							CollisionTile tile = new CollisionTile(center, rotation, core.getPhysicsShapes().loadRectangle(size.scl(0.5f / GraphicsManager.PPM)), impasse);
+							CollisionTile tile = new CollisionTile(center, rotation, Core.physicsShapes.loadRectangle(size.scl(0.5f / GraphicsManager.PPM)), impasse);
 							(impasse ? impasseTiles : collisionTiles).add(tile);
 						} else if(obj instanceof PolygonMapObject) {
 							Polygon polygon = ((PolygonMapObject) obj).getPolygon();
 							Vector2 center = new Vector2(polygon.getX(), polygon.getY()).scl(1 / GraphicsManager.PPM).add(x, y);
-							CollisionTile tile = new CollisionTile(center, rotation, core.getPhysicsShapes().loadPolygon(polygon, 1 / GraphicsManager.PPM), impasse);
+							CollisionTile tile = new CollisionTile(center, rotation, Core.physicsShapes.loadPolygon(polygon, 1 / GraphicsManager.PPM), impasse);
 							(impasse ? impasseTiles : collisionTiles).add(tile);
 						}
 					}
@@ -195,14 +192,10 @@ public class Map {
 					/**If none found, adds entire tile collision object.*/
 					if(!objects) {
 						(impasse ? impasseTiles : collisionTiles)
-							.add(new CollisionTile(new Vector2(x + 0.5f, y + 0.5f), 0, core.getMaps().getTileShape(), impasse));
+							.add(new CollisionTile(new Vector2(x + 0.5f, y + 0.5f), 0, Core.maps.getTileShape(), impasse));
 					}
 				}
 			}
-	}
-
-	public Core getCore() {
-		return core;
 	}
 
 	public TiledMap getTileMap() {

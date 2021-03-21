@@ -45,8 +45,8 @@ public class DebugOverlay extends Scene {
 	/**Flag determining if entity info should be displayed or not.*/
 	private boolean displayEntityInfo;
 
-	public DebugOverlay(Core core) {
-		super(core, true);
+	public DebugOverlay() {
+		super(true);
 		this.batch = new SpriteBatch();
 		this.font = new BitmapFont();
 		this.font.getData().markupEnabled = true;
@@ -84,7 +84,7 @@ public class DebugOverlay extends Scene {
 		super.act();
 		
 		boolean oldActive = active;
-		active = core.getInput().bindJustPressed("open-debug-menu") ? !active : active;
+		active = Core.input.bindJustPressed("open-debug-menu") ? !active : active;
 		if(active != oldActive)
 			recalculateRAMUsage();
 		
@@ -101,10 +101,10 @@ public class DebugOverlay extends Scene {
 			GameScene gameScene;
 			
 			/**Adds a tool-tip to about entity being inspected describing its data, if game in GameScene.*/
-			if(core.getInput().bindPressed("inspect") &&
-					(gameScene = (GameScene) core.getScenes().peekScene(GameScene.class)) != null) {
+			if(Core.input.bindPressed("inspect") &&
+					(gameScene = (GameScene) Core.scenes.peekScene(GameScene.class)) != null) {
 				Room room = gameScene.getRoom();
-				Vector2 mouseCoords = core.getInput().getMouseCoords(room.getCamera()).scl(1 / GraphicsManager.PPM);
+				Vector2 mouseCoords = Core.input.getMouseCoords(room.getCamera()).scl(1 / GraphicsManager.PPM);
 				Array<Fixture> fixtures = new Array<Fixture>(room.getWorld().getFixtureCount());
 				room.getWorld().getFixtures(fixtures);
 				

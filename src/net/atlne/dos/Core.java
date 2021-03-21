@@ -39,21 +39,21 @@ public class Core extends Game {
 	}
 	
 	/**Stores the JSON manager for the game.*/
-	private JsonManager json;
+	public static JsonManager json;
 	/**Stores the graphics manager for the game.*/
-	private GraphicsManager graphics;
+	public static GraphicsManager graphics;
 	/**Stores the audio helper for the game.*/
-	private AudioHelper audio;
+	public static AudioHelper audio;
 	/**Stores the input helper for the game.*/
-	private InputHelper input;
+	public static InputHelper input;
 	/**Stores the physics shape loader for the game.*/
-	private PhysicsShapeLoader physicsShapes;
+	public static PhysicsShapeLoader physicsShapes;
 	/**Stores the map loader for the game.*/
-	private MapLoader maps;
+	public static MapLoader maps;
 	/**Stores the scene manager for the game.*/
-	private SceneManager scenes;
+	public static SceneManager scenes;
 	/**Stores whether the debug overlay is active or not.*/
-	private DebugOverlay debug;
+	public static DebugOverlay debug;
 
 	/**Run when window is opened, before render()*/
 	@Override
@@ -66,15 +66,15 @@ public class Core extends Game {
 		Box2D.init();
 		
 		json = new JsonManager();
-		graphics = new GraphicsManager(this);
-		audio = new AudioHelper(this);
-		input = new InputHelper(this);
+		graphics = new GraphicsManager();
+		audio = new AudioHelper();
+		input = new InputHelper();
 		physicsShapes = new PhysicsShapeLoader();
-		scenes = new SceneManager(this);
-		maps = new MapLoader(this);
-		debug = new DebugOverlay(this);
+		scenes = new SceneManager();
+		maps = new MapLoader();
+		debug = new DebugOverlay();
 		
-		scenes.pushScene(new LoadingScene(this));
+		scenes.pushScene(new LoadingScene());
 	}
 	
 	/**Run when window is closed.*/
@@ -118,41 +118,9 @@ public class Core extends Game {
 	}
 	
 	/**Shows an error dialog box to the user, shows a Scene2D dialog box.*/
-	public void showErrorDialog(String message, Throwable exception) {
+	public static void showErrorDialog(String message, Throwable exception) {
 		System.err.println(message);
 		exception.printStackTrace();
 		Dialogs.showErrorDialog(scenes.getErrorScene(), "[RED]" + message, exception);
-	}
-	
-	public JsonManager getJson() {
-		return json;
-	}
-
-	public GraphicsManager getGraphics() {
-		return graphics;
-	}
-	
-	public AudioHelper getAudio() {
-		return audio;
-	}
-	
-	public InputHelper getInput() {
-		return input;
-	}
-	
-	public PhysicsShapeLoader getPhysicsShapes() {
-		return physicsShapes;
-	}
-	
-	public MapLoader getMaps() {
-		return maps;
-	}
-	
-	public SceneManager getScenes() {
-		return scenes;
-	}
-	
-	public DebugOverlay getDebugOverlay() {
-		return debug;
 	}
 }

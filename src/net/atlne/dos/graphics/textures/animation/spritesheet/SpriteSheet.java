@@ -35,29 +35,29 @@ public class SpriteSheet {
 	}
 	
 	/**Constructor for the sprite-sheet, takes in the texture location, width and height of the sprites.*/
-	public SpriteSheet(Core core, String textureLocation, int spriteWidth, int spriteHeight) {
+	public SpriteSheet(String textureLocation, int spriteWidth, int spriteHeight) {
 		this.textureLocation = textureLocation;
 		this.spriteWidth = spriteWidth;
 		this.spriteHeight = spriteHeight;
-		this.texture = core.getGraphics().getTextures().get(textureLocation);
+		this.texture = Core.graphics.getTextures().get(textureLocation);
 		/**Splits the texture into the 2D array.*/
 		sprites = new TextureRegion(texture).split(spriteWidth, spriteHeight);
 	}
 	
 	/**Constructor for the sprite-sheet, reads in the parameters from the given file.*/
-	public SpriteSheet(Core core, FileHandler spriteSheetFile) {
+	public SpriteSheet(FileHandler spriteSheetFile) {
 		/**Passes the contents of the file to the below constructor.*/
-		this(core, spriteSheetFile.getContents());
+		this(spriteSheetFile.getContents());
 	}
 	
 	/**Constructor for the sprite-sheet, reads in the parameters from the given file.*/
-	public SpriteSheet(Core core, String spriteSheet) {
+	public SpriteSheet(String spriteSheet) {
 		/**First reads in the contents of the file as a string and splits it by lines.*/
 		String[] lines = spriteSheet.trim().split("\n");
 		/**Gets the texture location from the first line.*/
 		this.textureLocation = lines[0].trim();
 		/**Loads the texture from the texture location.*/
-		this.texture = core.getGraphics().getTextures().get(textureLocation);
+		this.texture = Core.graphics.getTextures().get(textureLocation);
 			
 		/**Takes the width and height to be stored in the second and third lines respectively.*/
 		/**Parses both back into integers.*/
@@ -85,7 +85,7 @@ public class SpriteSheet {
 				this.animations.put(animationName, new Animation(duration, row, start, end, reversed));
 			}
 		} catch(NumberFormatException e) {
-			core.showErrorDialog("An error has occurred whilst loading a spritesheet!\nSpritesheet:\n" + spriteSheet, e);
+			Core.showErrorDialog("An error has occurred whilst loading a spritesheet!\nSpritesheet:\n" + spriteSheet, e);
 		}
 		
 		/**Creates the 2D array to store the sprites.*/
@@ -94,7 +94,7 @@ public class SpriteSheet {
 	
 	/**Constructor for the sprite-sheet, reads in the parameters from the given file
 	 * Also takes in a HashMap of String-String mappings of replacements for the animation file.*/
-	public SpriteSheet(Core core, String spriteSheet, HashMap<String, String> replacements) {
+	public SpriteSheet(String spriteSheet, HashMap<String, String> replacements) {
 		/**Handles any replacements for the sprite-sheet.*/
 		spriteSheet = HAStrings.replaceAll(spriteSheet, replacements);
 		/**Splits the sprite-sheet string by lines.*/
@@ -102,7 +102,7 @@ public class SpriteSheet {
 		/**Gets the texture location from the first line.*/
 		this.textureLocation = lines[0].trim();
 		/**Loads the texture from the texture location.*/
-		this.texture = core.getGraphics().getTextures().get(textureLocation);
+		this.texture = Core.graphics.getTextures().get(textureLocation);
 			
 		/**Takes the width and height to be stored in the second and third lines respectively.*/
 		/**Parses both back into integers.*/
@@ -132,7 +132,7 @@ public class SpriteSheet {
 				this.animations.put(animationName, new Animation(duration, row, start, end, reversed));
 			}
 		} catch(NumberFormatException e) {
-			core.showErrorDialog("An error has occurred whilst loading a spritesheet!\nSpritesheet:\n" + spriteSheet, e);
+			Core.showErrorDialog("An error has occurred whilst loading a spritesheet!\nSpritesheet:\n" + spriteSheet, e);
 		}
 		
 		/**Creates the 2D array to store the sprites.*/

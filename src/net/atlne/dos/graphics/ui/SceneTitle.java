@@ -11,8 +11,6 @@ import net.atlne.dos.graphics.text.FontLoader;
 
 public class SceneTitle extends Actor {
 	
-	/**Stores the core class instance.*/
-	protected Core core;
 	/**Stores the text for the title.*/
 	protected String text;
 	/**Stores the font for rendering the title.*/
@@ -20,8 +18,7 @@ public class SceneTitle extends Actor {
 	/**Stores the font size of the title font.*/
 	private int fontSize;
 
-	public SceneTitle(Core core, String text) {
-		this.core = core;
+	public SceneTitle(String text) {
 		this.text = text;
 		resize(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 	}
@@ -38,10 +35,10 @@ public class SceneTitle extends Actor {
 	/**Updates the title font size to reflect the change in screen size.*/
 	public void resize(float width, float height) {
 		fontSize = FontLoader.MAX_SIZE;
-		while((FontLoader.getWidth(core.getGraphics().getFonts().get(fontSize), text) > width
-				|| FontLoader.getHeight(core.getGraphics().getFonts().get(fontSize), text) > height)
+		while((FontLoader.getWidth(Core.graphics.getFonts().get(fontSize), text) > width
+				|| FontLoader.getHeight(Core.graphics.getFonts().get(fontSize), text) > height)
 				&& fontSize > 1)
 			fontSize--;
-		font = core.getGraphics().getFonts().get(fontSize);
+		font = Core.graphics.getFonts().get(fontSize);
 	}
 }

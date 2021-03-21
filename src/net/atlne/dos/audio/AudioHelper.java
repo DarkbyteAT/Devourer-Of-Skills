@@ -8,12 +8,12 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.files.FileHandle;
+import com.badlogic.gdx.utils.Disposable;
 import com.google.gson.reflect.TypeToken;
 
 import net.atlne.dos.Core;
-import net.atlne.dos.Manager;
 
-public class AudioHelper extends Manager {
+public class AudioHelper implements Disposable {
 	
 	/**Stores all supported sound file extensions.*/
 	public static final String[] SUPPORTED_EXTENSIONS = {".mp3", ".wav", ".ogg"};
@@ -28,15 +28,13 @@ public class AudioHelper extends Manager {
 	private float masterVolume = 1, musicVolume = 1, sfxVolume = 1;
 	
 	/**Loads in the current volume from the JSON file.*/
-	public AudioHelper(Core core) {
-		super(core);
-		
+	public AudioHelper() {
 		if(!Gdx.files.local("config/volume.json").exists()) {
 			if(!Gdx.files.local("config").exists()) Gdx.files.local("config").mkdirs();
 			Gdx.files.local("config/volume.json")
 				.writeString(Gdx.files.internal("net/atlne/dos/audio/default-volume.json").readString(), false);
 		} else {
-			ArrayList<Float> volumes = core.getJson().get("config/volume.json", new TypeToken<ArrayList<Float>>(){}.getType());
+			ArrayList<Float> volumes = Core.json.get("config/volume.json", new TypeToken<ArrayList<Float>>(){}.getType());
 			masterVolume = volumes.get(0);
 			musicVolume = volumes.get(1);
 			sfxVolume = volumes.get(2);
@@ -48,7 +46,7 @@ public class AudioHelper extends Manager {
 	public void dispose() {
 		if(!Gdx.files.local("config").exists())
 			Gdx.files.local("config").mkdirs();
-		core.getJson().set("config/volume.json", Arrays.asList(masterVolume, musicVolume, sfxVolume));
+		Core.json.set("config/volume.json", Arrays.asList(masterVolume, musicVolume, sfxVolume));
 		
 		/**Iterates over each music track.*/
 		for(Music m : music.values())

@@ -5,7 +5,6 @@ import com.kotcrab.vis.ui.widget.tabbedpane.Tab;
 import com.kotcrab.vis.ui.widget.tabbedpane.TabbedPane;
 import com.kotcrab.vis.ui.widget.tabbedpane.TabbedPaneAdapter;
 
-import net.atlne.dos.Core;
 import net.atlne.dos.scenes.windows.Window;
 import net.atlne.dos.scenes.windows.settings.tabs.AudioSettingsTab;
 import net.atlne.dos.scenes.windows.settings.tabs.ControlSettingsTab;
@@ -19,8 +18,8 @@ public class SettingsWindow extends Window {
 	/**Stores the tab pane for displaying the current tab.*/
 	private TabbedPane tabPane;
 	
-	public SettingsWindow(Core core) {
-		super(core, "Settings");
+	public SettingsWindow() {
+		super("Settings");
 		setResizable(true);
 		
 		table = new VisTable();
@@ -39,8 +38,8 @@ public class SettingsWindow extends Window {
 			}
 		});
 		
-		tabPane.add(new ControlSettingsTab(core));
-		tabPane.add(new AudioSettingsTab(core));
+		tabPane.add(new ControlSettingsTab());
+		tabPane.add(new AudioSettingsTab());
 		table.add(tabPane.getTable()).top().left().padBottom(8).fillX().row();
 		table.add(contentTable);
 		add(table);

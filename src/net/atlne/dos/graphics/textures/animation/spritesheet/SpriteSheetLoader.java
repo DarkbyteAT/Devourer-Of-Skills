@@ -6,18 +6,10 @@ import java.util.concurrent.ConcurrentHashMap;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 
-import net.atlne.dos.Core;
-
 public class SpriteSheetLoader {
 	
-	/**Stores an instance of the Core class.*/
-	private Core core;
 	/**Stores a map of all spritesheet's text representations with their paths as keys.*/
 	private ConcurrentHashMap<String, String> spriteSheets = new ConcurrentHashMap<String, String>();
-	
-	public SpriteSheetLoader(Core core) {
-		this.core = core;
-	}
 	
 	/**Creates a spritesheet from a file.*/
 	public SpriteSheet get(String fileName) {
@@ -35,7 +27,7 @@ public class SpriteSheetLoader {
 				spriteSheets.put(fileName, file.readString());
 		}
 		
-		return fileName == null ? null : new SpriteSheet(core, spriteSheets.get(fileName));
+		return fileName == null ? null : new SpriteSheet(spriteSheets.get(fileName));
 	}
 	
 	/**Creates a spritesheet from a file, using the given replacements.*/
@@ -54,6 +46,6 @@ public class SpriteSheetLoader {
 				spriteSheets.put(fileName, file.readString());
 		}
 		
-		return fileName == null ? null : new SpriteSheet(core, spriteSheets.get(fileName), replacements);
+		return fileName == null ? null : new SpriteSheet(spriteSheets.get(fileName), replacements);
 	}
 }
