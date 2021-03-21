@@ -1,0 +1,5 @@
+Beard,beard
+Big-stache,bigstache
+Five O' Clock,fiveoclock
+French-stache,frenchstache
+Mustache,mustache

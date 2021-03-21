@@ -1,0 +1,1343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="36" height="36" tilewidth="32" tileheight="32" infinite="0" nextlayerid="17" nextobjectid="293">
+ <properties>
+  <property name="max-light" type="float" value="1"/>
+  <property name="min-light" type="float" value="0.1"/>
+  <property name="music" value="town"/>
+ </properties>
+ <tileset firstgid="1" name="stone-house" tilewidth="32" tileheight="32" tilecount="256" columns="16">
+  <image source="../textures/maps/cottage.png" width="512" height="512"/>
+ </tileset>
+ <tileset firstgid="257" name="outside" tilewidth="32" tileheight="32" tilecount="1024" columns="32">
+  <image source="../textures/maps/outside.png" width="1024" height="1024"/>
+  <terraintypes>
+   <terrain name="Road" tile="112"/>
+   <terrain name="Lava" tile="304"/>
+   <terrain name="Pit" tile="121"/>
+   <terrain name="Grass" tile="118"/>
+   <terrain name="Water" tile="394"/>
+  </terraintypes>
+  <tile id="0">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="21" y="19" width="11" height="13"/>
+   </objectgroup>
+  </tile>
+  <tile id="2">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="18" width="13" height="14"/>
+   </objectgroup>
+  </tile>
+  <tile id="3">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="19">
+     <polygon points="0,0 23,-19 32,-19 32,13 0,13"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="4">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="10" y="0">
+     <polygon points="0,0 22,19 22,32 -10,32 -10,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="5">
+   <objectgroup draworder="index" id="2">
+    <object id="2" x="0" y="0" width="24" height="32"/>
+    <object id="3" x="24" y="0" width="8" height="21"/>
+   </objectgroup>
+  </tile>
+  <tile id="6">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="32" height="18"/>
+   </objectgroup>
+  </tile>
+  <tile id="7">
+   <objectgroup draworder="index" id="2">
+    <object id="2" x="13" y="0" width="19" height="32"/>
+    <object id="3" x="0" y="0" width="13" height="18"/>
+   </objectgroup>
+  </tile>
+  <tile id="8">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="18">
+     <polygon points="0,0 23,-18 0,-18"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="9">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="12" y="0">
+     <polygon points="0,0 20,18 20,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="10">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="10" y="0" width="22" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="16" terrain="0,0,0,"/>
+  <tile id="17" terrain="0,0,,0"/>
+  <tile id="22" terrain="3,3,3,"/>
+  <tile id="23" terrain="3,3,,3"/>
+  <tile id="25" terrain="2,2,2,">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="23" y="32">
+     <polygon points="-2,0 9,-13 9,-32 -23,-32 -23,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="26" terrain="2,2,,2">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="20">
+     <polygon points="0,-2 0,-20 32,-20 32,12 11,12"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="32">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="15" y="0" width="17" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="34">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="16" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="37">
+   <objectgroup draworder="index" id="2">
+    <object id="4" x="0" y="0" width="23" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="39">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="12" y="0" width="20" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="40">
+   <objectgroup draworder="index" id="2">
+    <object id="4" x="0" y="8">
+     <polygon points="0,0 23,24 0,24"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="41">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="8" y="32">
+     <polygon points="0,0 24,-24 24,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="42">
+   <objectgroup draworder="index" id="2">
+    <object id="2" x="0" y="9" width="11" height="23"/>
+    <object id="3" x="9" y="0" width="4" height="9"/>
+   </objectgroup>
+  </tile>
+  <tile id="48" terrain="0,,0,0"/>
+  <tile id="49" terrain=",0,0,0"/>
+  <tile id="54" terrain="3,,3,3"/>
+  <tile id="55" terrain=",3,3,3"/>
+  <tile id="57" terrain="2,,2,2">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="19" y="0">
+     <polygon points="2,0 13,10 13,32 -19,32 -19,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="58" terrain=",2,2,2">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="9">
+     <polygon points="0,1 11,-9 32,-9 32,23 0,23"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="64">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="18" y="0" width="14" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="66">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="13" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="69">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="10" width="32" height="22"/>
+    <object id="2" x="0" y="0" width="20" height="10"/>
+   </objectgroup>
+  </tile>
+  <tile id="70">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="9" width="32" height="23"/>
+   </objectgroup>
+  </tile>
+  <tile id="71">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="9" width="32" height="23"/>
+    <object id="2" x="9" y="0" width="23" height="9"/>
+   </objectgroup>
+  </tile>
+  <tile id="72">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="-1" y="0" width="20" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="74">
+   <objectgroup draworder="index" id="2">
+    <object id="2" x="0" y="0" width="13" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="79" terrain=",,,0"/>
+  <tile id="80" terrain=",,0,0"/>
+  <tile id="81" terrain=",,0,"/>
+  <tile id="85" terrain=",,,3"/>
+  <tile id="86" terrain=",,3,3"/>
+  <tile id="87" terrain=",,3,"/>
+  <tile id="88" terrain=",,,2">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="11" y="32">
+     <polygon points="0,0 21,-22 21,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="89" terrain=",,2,2">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="10" width="32" height="22"/>
+   </objectgroup>
+  </tile>
+  <tile id="90" terrain=",,2,">
+   <objectgroup draworder="index" id="2">
+    <object id="2" x="0" y="10">
+     <polygon points="0,0 21,22 0,22"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="96">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="15" y="0" width="17" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="98">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="16" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="99">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="15" y="0" width="17" height="32"/>
+    <object id="2" x="0" y="0" width="15" height="11"/>
+   </objectgroup>
+  </tile>
+  <tile id="100">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="15" height="32"/>
+    <object id="2" x="15" y="0" width="17" height="10"/>
+   </objectgroup>
+  </tile>
+  <tile id="101">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="17" y="0" width="15" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="103">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="16" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="104">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="18" height="11"/>
+    <object id="2" x="12" y="11" width="12" height="21"/>
+   </objectgroup>
+  </tile>
+  <tile id="105">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="12" y="0" width="20" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="106">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="10" height="12"/>
+   </objectgroup>
+  </tile>
+  <tile id="111" terrain=",0,,0"/>
+  <tile id="112" terrain="0,0,0,0"/>
+  <tile id="113" terrain="0,,0,"/>
+  <tile id="117" terrain=",3,,3"/>
+  <tile id="118" terrain="3,3,3,3"/>
+  <tile id="119" terrain="3,,3,"/>
+  <tile id="120" terrain=",2,,2">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="11" y="0" width="21" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="121" terrain="2,2,2,2"/>
+  <tile id="122" terrain="2,,2,">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="21" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="128">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="19" y="0" width="13" height="11"/>
+   </objectgroup>
+  </tile>
+  <tile id="129">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="32" height="11"/>
+   </objectgroup>
+  </tile>
+  <tile id="130">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="10" height="12"/>
+   </objectgroup>
+  </tile>
+  <tile id="131">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="15" width="32" height="17"/>
+   </objectgroup>
+  </tile>
+  <tile id="132">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="15" width="32" height="17"/>
+   </objectgroup>
+  </tile>
+  <tile id="133">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="19" y="0" width="13" height="11"/>
+   </objectgroup>
+  </tile>
+  <tile id="134">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="32" height="11"/>
+   </objectgroup>
+  </tile>
+  <tile id="135">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="10" height="12"/>
+   </objectgroup>
+  </tile>
+  <tile id="143" terrain=",0,,"/>
+  <tile id="144" terrain="0,0,,"/>
+  <tile id="145" terrain="0,,,"/>
+  <tile id="149" terrain=",3,,"/>
+  <tile id="150" terrain="3,3,,"/>
+  <tile id="151" terrain="3,,,"/>
+  <tile id="152" terrain=",2,,">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="11" y="0">
+     <polygon points="0,0 21,18 21,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="153" terrain="2,2,,">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="32" height="18"/>
+   </objectgroup>
+  </tile>
+  <tile id="154" terrain="2,,,">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="19">
+     <polygon points="0,0 21,-19 0,-19"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="160">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="7" height="32"/>
+    <object id="2" x="25" y="0" width="7" height="32"/>
+    <object id="3" x="7" y="0" width="18" height="4"/>
+   </objectgroup>
+  </tile>
+  <tile id="161">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="19" width="13" height="13"/>
+    <object id="2" x="0" y="0" width="32" height="19"/>
+   </objectgroup>
+  </tile>
+  <tile id="162">
+   <objectgroup draworder="index" id="4">
+    <object id="3" x="0" y="0" width="32" height="19"/>
+    <object id="4" x="19" y="19" width="13" height="13"/>
+   </objectgroup>
+  </tile>
+  <tile id="163">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="18" y="0" width="14" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="164">
+   <objectgroup draworder="index" id="2">
+    <object id="2" x="0" y="8" width="32" height="24"/>
+   </objectgroup>
+  </tile>
+  <tile id="165">
+   <objectgroup draworder="index" id="2">
+    <object id="4" x="0" y="9">
+     <polygon points="0,0 21,-2 0,23"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="166">
+   <objectgroup draworder="index" id="2">
+    <object id="2" x="11" y="11">
+     <polygon points="0,0 21,-3 21,21"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="167">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="8" width="32" height="24"/>
+   </objectgroup>
+  </tile>
+  <tile id="168">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="13" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="181" terrain="3,3,3,3"/>
+  <tile id="182" terrain="3,3,3,3"/>
+  <tile id="183" terrain="3,3,3,3"/>
+  <tile id="192">
+   <objectgroup draworder="index" id="2">
+    <object id="2" x="0" y="0" width="3" height="10"/>
+    <object id="3" x="29" y="0" width="3" height="9"/>
+   </objectgroup>
+  </tile>
+  <tile id="193">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="11" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="194">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="21" y="0" width="11" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="195">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="15" y="0" width="17" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="196">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="32">
+     <polygon points="0,0 32,-32 0,-32"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="197">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="32" y="8">
+     <polygon points="0,0 -14,2 -32,24 0,24"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="198">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="8">
+     <polygon points="0,0 11,1 32,24 0,24"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="200">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="16" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="205">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="21" y="32">
+     <polygon points="0,0 11,-14 11,-32 -21,-32 -21,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="206">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="13" y="32">
+     <polygon points="0,0 -13,-15 -13,-32 19,-32 19,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="208" terrain="1,1,1,">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="23" y="32">
+     <polygon points="-2,0 9,-13 9,-32 -23,-32 -23,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="209" terrain="1,1,,1">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="20">
+     <polygon points="0,-2 0,-20 32,-20 32,12 11,12"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="225">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="10" height="11"/>
+   </objectgroup>
+  </tile>
+  <tile id="226">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="23" y="0" width="9" height="9"/>
+   </objectgroup>
+  </tile>
+  <tile id="227">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="20" y="0" width="12" height="5"/>
+   </objectgroup>
+  </tile>
+  <tile id="228">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="32">
+     <polygon points="0,0 32,-32 32,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="231">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0">
+     <polygon points="0,0 32,32 0,32"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="232">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="10" height="5"/>
+   </objectgroup>
+  </tile>
+  <tile id="237">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0">
+     <polygon points="0,0 18,0 32,14 32,32 0,32"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="238">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="14">
+     <polygon points="0,0 13,-14 32,-14 32,18 0,18"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="240" terrain="1,,1,1">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="19" y="0">
+     <polygon points="2,0 13,10 13,32 -19,32 -19,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="241" terrain=",1,1,1">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="9">
+     <polygon points="0,1 11,-9 32,-9 32,23 0,23"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="259">
+   <objectgroup draworder="index" id="2">
+    <object id="2" x="32" y="11">
+     <polygon points="0,0 -13,-3 0,-11"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="260">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="32" height="11"/>
+   </objectgroup>
+  </tile>
+  <tile id="261">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="32" height="11"/>
+   </objectgroup>
+  </tile>
+  <tile id="262">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="32" height="11"/>
+   </objectgroup>
+  </tile>
+  <tile id="263">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="32" height="11"/>
+   </objectgroup>
+  </tile>
+  <tile id="264">
+   <objectgroup draworder="index" id="2">
+    <object id="2" x="9" y="9">
+     <polygon points="0,0 -9,-9 -9,1"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="268">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="9" y="32">
+     <polygon points="0,0 23,-24 23,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="269">
+   <objectgroup draworder="index" id="2">
+    <object id="2" x="0" y="8" width="32" height="24"/>
+   </objectgroup>
+  </tile>
+  <tile id="270">
+   <objectgroup draworder="index" id="2">
+    <object id="2" x="0" y="8">
+     <polygon points="0,0 23,24 0,24"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="271" terrain=",,,1">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="11" y="32">
+     <polygon points="0,0 21,-22 21,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="272" terrain=",,1,1">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="10" width="32" height="22"/>
+   </objectgroup>
+  </tile>
+  <tile id="273" terrain=",,1,">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="10">
+     <polygon points="0,0 21,22 0,22"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="298" terrain="4,4,4,">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="23" y="32">
+     <polygon points="-2,0 9,-13 9,-32 -23,-32 -23,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="299" terrain="4,4,,4">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="20">
+     <polygon points="0,-2 0,-20 32,-20 32,12 11,12"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="300">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="9" y="0" width="23" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="302">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="23" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="303" terrain=",1,,1">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="11" y="0" width="21" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="304" terrain="1,1,1,1">
+   <animation>
+    <frame tileid="304" duration="2500"/>
+    <frame tileid="367" duration="1000"/>
+    <frame tileid="368" duration="1000"/>
+    <frame tileid="369" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="305" terrain="1,,1,">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="21" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="330" terrain="4,,4,4">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="19" y="0">
+     <polygon points="2,0 13,10 13,32 -19,32 -19,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="331" terrain=",4,4,4">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="9">
+     <polygon points="0,1 11,-9 32,-9 32,23 0,23"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="332">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="8" y="0">
+     <polygon points="0,0 24,20 24,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="333">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="32" height="18"/>
+   </objectgroup>
+  </tile>
+  <tile id="334">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="19">
+     <polygon points="0,0 23,-19 0,-19"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="335" terrain=",1,,">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="11" y="0">
+     <polygon points="0,0 21,18 21,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="336" terrain="1,1,,">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="32" height="18"/>
+   </objectgroup>
+  </tile>
+  <tile id="337" terrain="1,,,">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="19">
+     <polygon points="0,0 21,-19 0,-19"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="361" terrain=",,,4">
+   <objectgroup draworder="index" id="2">
+    <object id="2" x="11" y="32">
+     <polygon points="0,0 21,-22 21,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="362" terrain=",,4,4">
+   <objectgroup draworder="index" id="2">
+    <object id="2" x="0" y="10" width="32" height="22"/>
+   </objectgroup>
+  </tile>
+  <tile id="363" terrain=",,4,">
+   <objectgroup draworder="index" id="2">
+    <object id="2" x="0" y="10">
+     <polygon points="0,0 21,22 0,22"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="393" terrain=",4,,4">
+   <objectgroup draworder="index" id="2">
+    <object id="2" x="11" y="0" width="21" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="394" terrain="4,4,4,4">
+   <animation>
+    <frame tileid="394" duration="2500"/>
+    <frame tileid="457" duration="1000"/>
+    <frame tileid="458" duration="1000"/>
+    <frame tileid="459" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="395" terrain="4,,4,">
+   <objectgroup draworder="index" id="2">
+    <object id="2" x="0" y="0" width="21" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="425" terrain=",4,,">
+   <objectgroup draworder="index" id="2">
+    <object id="2" x="11" y="0">
+     <polygon points="0,0 21,18 21,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="426" terrain="4,4,,">
+   <objectgroup draworder="index" id="2">
+    <object id="2" x="0" y="0" width="32" height="18"/>
+   </objectgroup>
+  </tile>
+  <tile id="427" terrain="4,,,">
+   <objectgroup draworder="index" id="2">
+    <object id="2" x="0" y="19">
+     <polygon points="0,0 21,-19 0,-19"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="435">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="32" height="24"/>
+   </objectgroup>
+  </tile>
+  <tile id="463">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="6" y="5" width="20" height="23"/>
+   </objectgroup>
+  </tile>
+  <tile id="495">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="6" y="5" width="20" height="23"/>
+   </objectgroup>
+  </tile>
+  <tile id="496">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="7" y="0" width="18" height="12"/>
+   </objectgroup>
+  </tile>
+  <tile id="497">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="7" y="0" width="18" height="12"/>
+   </objectgroup>
+  </tile>
+  <tile id="498">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="3" y="0" width="26" height="15"/>
+   </objectgroup>
+  </tile>
+  <tile id="499">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="2" y="0" width="28" height="31"/>
+   </objectgroup>
+  </tile>
+  <tile id="500">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="32" height="24"/>
+   </objectgroup>
+  </tile>
+  <tile id="528">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="32" height="17"/>
+   </objectgroup>
+  </tile>
+  <tile id="529">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="32" height="17"/>
+   </objectgroup>
+  </tile>
+  <tile id="530">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="32" height="17"/>
+   </objectgroup>
+  </tile>
+  <tile id="557">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="24" height="13"/>
+   </objectgroup>
+  </tile>
+  <tile id="559">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="8" y="0" width="24" height="13"/>
+   </objectgroup>
+  </tile>
+  <tile id="563">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="16" height="18"/>
+    <object id="2" x="16" y="0" width="16" height="30"/>
+   </objectgroup>
+  </tile>
+  <tile id="564">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="14" height="30"/>
+   </objectgroup>
+  </tile>
+  <tile id="589">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="16" width="32" height="16"/>
+   </objectgroup>
+  </tile>
+  <tile id="590">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="16" width="32" height="16"/>
+   </objectgroup>
+  </tile>
+  <tile id="592">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="24" height="13"/>
+   </objectgroup>
+  </tile>
+  <tile id="594">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="8" y="0" width="24" height="13"/>
+   </objectgroup>
+  </tile>
+  <tile id="595">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="8" width="32" height="24"/>
+   </objectgroup>
+  </tile>
+  <tile id="596">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="8" width="32" height="24"/>
+   </objectgroup>
+  </tile>
+  <tile id="634">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="8" y="0" width="16" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="637">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="8" y="0" width="16" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="651">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="8" y="22" width="24" height="10"/>
+   </objectgroup>
+  </tile>
+  <tile id="652">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="22" width="24" height="10"/>
+   </objectgroup>
+  </tile>
+  <tile id="653">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="32" height="16"/>
+   </objectgroup>
+  </tile>
+  <tile id="654">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="32" height="16"/>
+   </objectgroup>
+  </tile>
+  <tile id="666">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="8" y="0" width="16" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="669">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="8" y="0" width="16" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="683">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="8" y="0" width="24" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="684">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="24" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="715">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="8" y="0" width="24" height="24"/>
+   </objectgroup>
+  </tile>
+  <tile id="716">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="24" height="24"/>
+   </objectgroup>
+  </tile>
+  <tile id="766">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="31" y="0" width="1" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="767">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="1" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="798">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="31" y="0" width="1" height="25"/>
+   </objectgroup>
+  </tile>
+  <tile id="799">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="1" height="25"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="1281" name="outdoor_decor" tilewidth="32" tileheight="32" tilecount="16" columns="4">
+  <image source="../textures/maps/outdoor_decor.png" width="128" height="128"/>
+  <tile id="0">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="1" y="5" width="30" height="9"/>
+   </objectgroup>
+  </tile>
+  <tile id="1">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="1" y="7" width="30" height="16"/>
+   </objectgroup>
+  </tile>
+  <tile id="2">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="5" y="0" width="22" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="3">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="3" width="32" height="29"/>
+   </objectgroup>
+  </tile>
+  <tile id="6">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="6" y="0" width="20" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="7">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="6" y="0" width="17" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="8">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="13" y="0" width="19" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="9">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="7" width="32" height="3"/>
+   </objectgroup>
+  </tile>
+  <tile id="10">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="19" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="12">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="7" width="32" height="20"/>
+   </objectgroup>
+  </tile>
+  <tile id="13">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="6" width="32" height="20"/>
+   </objectgroup>
+  </tile>
+  <tile id="14">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="7" width="32" height="10"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="1297" name="misc_decor" tilewidth="32" tileheight="32" tilecount="9" columns="3">
+  <image source="../textures/maps/misc_decor.png" width="96" height="96"/>
+  <tile id="3">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0">
+     <polygon points="0,0 4,17 13,26 24,32 32,32 32,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="4">
+   <objectgroup draworder="index" id="2">
+    <object id="3" x="0" y="32">
+     <polygon points="0,0 8,0 17,-5 28,-15 32,-32 0,-32"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="5">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="13" y="0" width="6" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="8">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="11" y="0" width="10" height="24"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="1306" name="thatched-roof" tilewidth="32" tileheight="32" tilecount="256" columns="16">
+  <image source="../textures/maps/thatched-roof.png" width="512" height="512"/>
+ </tileset>
+ <layer id="6" name="ground-1" width="36" height="36">
+  <properties>
+   <property name="background" type="bool" value="true"/>
+   <property name="bridge" type="bool" value="false"/>
+   <property name="collision" type="bool" value="false"/>
+   <property name="foreground" type="bool" value="false"/>
+   <property name="impasse" type="bool" value="false"/>
+   <property name="light-map" type="bool" value="false"/>
+   <property name="reference" type="bool" value="false"/>
+   <property name="spawner" type="bool" value="false"/>
+   <property name="traversable" type="bool" value="true"/>
+  </properties>
+  <data encoding="base64">
+   uAEAALgBAAC4AQAAdwEAALgBAAC4AQAAtgEAALgBAAB3AQAAtwEAALcBAAB3AQAAuAEAAHcBAAC3AQAAtwEAALYBAAC4AQAAtwEAALcBAAC2AQAAdwEAALcBAAC2AQAAtwEAALgBAAB3AQAAtgEAALgBAAC3AQAAtgEAAHcBAAC3AQAAtgEAALcBAAC4AQAAdwEAALgBAAC2AQAAtgEAALYBAAC4AQAAuAEAALcBAAB3AQAAtgEAALYBAAC3AQAAtgEAALcBAAC3AQAAtwEAAHcBAAC4AQAAdwEAALgBAAB3AQAAuAEAALcBAAC4AQAAuAEAAHcBAAC2AQAAuAEAALcBAAC2AQAAtgEAALYBAAB3AQAAuAEAALYBAAC4AQAAdwEAALcBAAB3AQAAuAEAALcBAAC4AQAAtgEAALcBAAB3AQAAuAEAALgBAAB3AQAAdwEAAHcBAAC2AQAAdwEAALYBAAB3AQAAuAEAALcBAAB3AQAAtwEAALgBAAC4AQAAtgEAAHcBAAC4AQAAtwEAALYBAAC4AQAAtgEAALcBAAB3AQAAtgEAALYBAAC4AQAAtwEAAHcBAAC2AQAAtgEAALYBAAC2AQAAdwEAALcBAAB3AQAAtwEAALgBAAB3AQAAuAEAALgBAAC3AQAAtwEAALcBAAB3AQAAuAEAALYBAAB3AQAAdwEAAHcBAAB3AQAAtgEAALcBAAB3AQAAtgEAALYBAAC2AQAAtwEAALgBAAC3AQAAuAEAALYBAAC4AQAAtwEAALcBAAB3AQAAuAEAALcBAAB3AQAAtgEAALgBAAB3AQAAuAEAALcBAAC2AQAAuAEAAHcBAAC4AQAAdwEAALcBAAC2AQAAuAEAALYBAAC4AQAAuAEAALcBAAB3AQAAdwEAALYBAAC4AQAAdwEAAHcBAAB3AQAAuAEAALgBAAB3AQAAdwEAALYBAAB3AQAAtwEAALcBAAC4AQAAtwEAALgBAAC2AQAAuAEAALYBAAC2AQAAdwEAAHcBAAC3AQAAtgEAALYBAAC3AQAAdwEAALgBAAC2AQAAtgEAALYBAAC3AQAAtgEAALYBAAC3AQAAuAEAALcBAAC4AQAAtgEAALcBAAC2AQAAtgEAALYBAAC3AQAAuAEAALgBAAC2AQAAuAEAALgBAAC2AQAAdwEAALgBAAC4AQAAtgEAAHcBAAC3AQAAtgEAALcBAAC4AQAAtwEAALgBAAC4AQAAuAEAALgBAAC2AQAAtgEAAHcBAAC4AQAAtgEAALgBAAC2AQAAdwEAALcBAAC3AQAAtwEAALcBAAB3AQAAtwEAALcBAAC3AQAAtwEAALYBAAC3AQAAtgEAALcBAAB3AQAAdwEAAHcBAAC3AQAAtgEAALgBAAB3AQAAdwEAAHcBAAC4AQAAtwEAALcBAAC2AQAAuAEAALcBAAC3AQAAtgEAALgBAAC2AQAAtgEAALYBAAC2AQAAdwEAALcBAAC4AQAAdwEAALYBAAC4AQAAuAEAALcBAAC3AQAAtgEAALgBAAC4AQAAdwEAALcBAAC3AQAAtgEAALcBAAB3AQAAuAEAALcBAAB3AQAAtgEAALcBAAC3AQAAuAEAALYBAAC4AQAAtwEAALgBAAC2AQAAtwEAALgBAAB3AQAAtgEAALYBAAC4AQAAuAEAALYBAAC2AQAAuAEAALYBAAB3AQAAtgEAAHcBAAC4AQAAuAEAAHcBAAB3AQAAtwEAALgBAAC2AQAAtgEAALcBAAC2AQAAuAEAALgBAAB3AQAAuAEAALYBAAC2AQAAtgEAALcBAAC4AQAAtgEAALYBAAB3AQAAtgEAALYBAAC4AQAAuAEAALgBAAC2AQAAdwEAAHcBAAC4AQAAtwEAALgBAAB3AQAAdwEAALYBAAC2AQAAtwEAALcBAAC4AQAAuAEAALgBAAC3AQAAtgEAALcBAAC2AQAAuAEAALcBAAC2AQAAdwEAALYBAAC4AQAAdwEAALgBAAB3AQAAtwEAAHcBAAC3AQAAtwEAALgBAAB3AQAAtwEAALgBAAC3AQAAtwEAALcBAAB3AQAAtwEAALgBAAC2AQAAtwEAAHcBAAC3AQAAtwEAALYBAAC3AQAAdwEAALgBAAC4AQAAtwEAALYBAAC3AQAAtwEAALcBAAC4AQAAdwEAAHcBAAC4AQAAuAEAAHcBAAC4AQAAdwEAALcBAAC3AQAAtgEAAHcBAAC2AQAAtwEAALYBAAC2AQAAtgEAAHcBAAC3AQAAtwEAAHcBAAC3AQAAtwEAALgBAAC4AQAAtgEAALYBAAB3AQAAtgEAALcBAAC2AQAAdwEAAHcBAAB3AQAAdwEAAHcBAAC4AQAAtgEAALgBAAC4AQAAtgEAAHcBAAC3AQAAdwEAALYBAAC2AQAAuAEAALYBAAB3AQAAuAEAALgBAAC3AQAAtgEAALYBAAC4AQAAuAEAAHcBAAC4AQAAtwEAAHcBAAC2AQAAdwEAAHcBAAC2AQAAdwEAAHcBAAC4AQAAtgEAALgBAAC4AQAAdwEAALYBAAC2AQAAtwEAAHcBAAC3AQAAdwEAALgBAAC3AQAAtgEAALYBAAC2AQAAtwEAALgBAAC4AQAAdwEAALYBAAB3AQAAdwEAALYBAAC3AQAAdwEAAHcBAAC2AQAAuAEAAHcBAAC2AQAAdwEAALgBAAC2AQAAuAEAAHcBAAC2AQAAtwEAALcBAAC3AQAAtwEAALgBAAC4AQAAdwEAALYBAAC4AQAAtgEAALgBAAC2AQAAtgEAALYBAAC2AQAAuAEAAHcBAAC4AQAAuAEAALcBAAC2AQAAtwEAALYBAAC2AQAAuAEAAHcBAAC3AQAAuAEAALYBAAC2AQAAdwEAALcBAAB3AQAAuAEAALcBAAC2AQAAtgEAALYBAAC4AQAAtwEAALgBAAC3AQAAuAEAAHcBAAC4AQAAuAEAALcBAAB3AQAAtgEAALcBAAC4AQAAdwEAALcBAAC3AQAAuAEAALgBAAC3AQAAtwEAALcBAAB3AQAAuAEAALYBAAC2AQAAtwEAAHcBAAB3AQAAdwEAALgBAAC3AQAAtwEAALgBAAB3AQAAtwEAALYBAAC3AQAAtgEAALcBAAC4AQAAuAEAALcBAAC2AQAAdwEAAHcBAAC3AQAAtgEAALcBAAC4AQAAuAEAAHcBAAB3AQAAuAEAALcBAAC2AQAAuAEAALYBAAC2AQAAtgEAALcBAAC2AQAAdwEAALgBAAC4AQAAtgEAAHcBAAC4AQAAtwEAAHcBAAB3AQAAtwEAALgBAAB3AQAAtwEAALYBAAC2AQAAdwEAALgBAAC4AQAAtgEAAHcBAAB3AQAAtwEAALgBAAB3AQAAdwEAALgBAAC3AQAAtwEAALcBAAC3AQAAuAEAALgBAAC2AQAAtgEAALcBAAC2AQAAdwEAALgBAAC3AQAAdwEAALcBAAC2AQAAtgEAALYBAAC2AQAAtgEAALgBAAC4AQAAuAEAALcBAAC3AQAAdwEAALYBAAB3AQAAdwEAALYBAAC4AQAAtwEAALgBAAC2AQAAtwEAAHcBAAC2AQAAtwEAALgBAAB3AQAAuAEAALcBAAC2AQAAtgEAAHcBAAC4AQAAdwEAAHcBAAB3AQAAtwEAAHcBAAC2AQAAtwEAALgBAAB3AQAAdwEAALgBAAC2AQAAuAEAALYBAAC3AQAAtwEAALcBAAC3AQAAtwEAALcBAAC3AQAAtgEAALgBAAB3AQAAdwEAALcBAAC4AQAAtgEAALcBAAC4AQAAtgEAALcBAAB3AQAAdwEAALgBAAC3AQAAuAEAAHcBAAC4AQAAdwEAAHcBAAC2AQAAtgEAALYBAAC3AQAAdwEAALYBAAC3AQAAuAEAALgBAAC2AQAAtwEAALcBAAC4AQAAtwEAALcBAAC3AQAAtwEAALYBAAC2AQAAtgEAALcBAAC2AQAAuAEAALcBAAC4AQAAuAEAALYBAAC2AQAAuAEAAHcBAAC3AQAAuAEAALcBAAC4AQAAtwEAALcBAAC4AQAAdwEAALgBAAC3AQAAtgEAALcBAAC2AQAAtgEAALYBAAC3AQAAtgEAAHcBAAC3AQAAdwEAALYBAAC4AQAAuAEAALcBAAC2AQAAdwEAAHcBAAC3AQAAtwEAALcBAAC4AQAAtgEAALYBAAC3AQAAdwEAALcBAAC4AQAAtwEAALcBAAC4AQAAdwEAALcBAAC2AQAAtgEAALgBAAB3AQAAtwEAAHcBAAC2AQAAtgEAAHcBAAC4AQAAdwEAAHcBAAC2AQAAtwEAAHcBAAC4AQAAtwEAALYBAAC4AQAAdwEAALgBAAC3AQAAtgEAAHcBAAC4AQAAtwEAALYBAAC3AQAAdwEAALgBAAC2AQAAtgEAALYBAAC4AQAAuAEAAHcBAAB3AQAAdwEAALYBAAC3AQAAtwEAAHcBAAB3AQAAuAEAALYBAAB3AQAAtgEAALgBAAB3AQAAtwEAALYBAAC3AQAAtgEAALgBAAC2AQAAtwEAALYBAAC3AQAAuAEAAHcBAAC2AQAAuAEAALgBAAC3AQAAuAEAALgBAAC4AQAAdwEAALcBAAC2AQAAuAEAALcBAAC3AQAAuAEAALgBAAC3AQAAtgEAALgBAAC4AQAAdwEAAHcBAAB3AQAAtgEAALcBAAC4AQAAtgEAALgBAAB3AQAAdwEAALcBAAC2AQAAtgEAALcBAAB3AQAAdwEAALcBAAB3AQAAuAEAALgBAAC2AQAAtgEAALcBAAB3AQAAuAEAAHcBAAC3AQAAtgEAALcBAAB3AQAAuAEAALcBAAB3AQAAdwEAAHcBAAC4AQAAdwEAALcBAAC2AQAAdwEAALYBAAC2AQAAtgEAALcBAAC3AQAAdwEAALYBAAC3AQAAtgEAALYBAAB3AQAAtgEAALgBAAB3AQAAdwEAALYBAAC4AQAAtgEAALYBAAC4AQAAuAEAALgBAAC3AQAAdwEAALYBAAC4AQAAtgEAAHcBAAB3AQAAdwEAALgBAAC3AQAAtwEAAHcBAAC2AQAAuAEAAHcBAAC2AQAAdwEAALgBAAC2AQAAtgEAALgBAAC4AQAAuAEAALgBAAC3AQAAuAEAALgBAAC4AQAAtgEAALYBAAC3AQAAdwEAALcBAAC3AQAAtwEAALcBAAB3AQAAuAEAAHcBAAC2AQAAuAEAALgBAAC2AQAAtwEAALcBAAB3AQAAtwEAALcBAAC2AQAAtwEAALgBAAC4AQAAtwEAALgBAAC2AQAAtgEAAHcBAAB3AQAAdwEAALgBAAC3AQAAtwEAALgBAAC2AQAAuAEAAHcBAAC2AQAAtwEAALcBAAC2AQAAdwEAAHcBAAC3AQAAuAEAALYBAAC3AQAAtgEAALcBAAB3AQAAtwEAALcBAAC3AQAAdwEAAHcBAAB3AQAAtgEAALgBAAC2AQAAdwEAALgBAAC4AQAAuAEAALgBAAC2AQAAtgEAALcBAAC2AQAAtgEAAHcBAAC4AQAAuAEAALcBAAC4AQAAtgEAAHcBAAC4AQAAtgEAALYBAAC2AQAAtwEAAHcBAAC4AQAAdwEAALcBAAC3AQAAuAEAALgBAAB3AQAAdwEAALgBAAC2AQAAdwEAALcBAAC3AQAAuAEAAHcBAAC2AQAAtgEAALgBAAC4AQAAtwEAALYBAAC3AQAAtwEAALgBAAC3AQAAdwEAAHcBAAB3AQAAtwEAALgBAAC2AQAAtwEAAHcBAAC2AQAAtgEAALcBAAB3AQAAtgEAALcBAAC4AQAAdwEAALgBAAB3AQAAuAEAALgBAAB3AQAAdwEAAHcBAAC2AQAAuAEAAHcBAAC3AQAAtgEAALgBAAC3AQAAdwEAALYBAAC3AQAAtgEAALYBAAB3AQAAtwEAAHcBAAC3AQAAtgEAALgBAAC3AQAAtgEAAHcBAAC4AQAAuAEAALcBAAC2AQAAtwEAALYBAAC3AQAAtwEAAHcBAAC2AQAAuAEAALgBAAC4AQAAtwEAALgBAAC2AQAAdwEAALgBAAB3AQAAuAEAALYBAAC3AQAAdwEAALcBAAC3AQAAtwEAALYBAAC2AQAAtwEAAHcBAAC3AQAAtwEAALYBAAC4AQAAuAEAALcBAAC2AQAAdwEAALYBAAC2AQAAtwEAALYBAAB3AQAAtgEAAHcBAAC3AQAAtgEAAHcBAAB3AQAAdwEAALcBAAC3AQAAtwEAALgBAAB3AQAAtwEAALYBAAC2AQAAuAEAALgBAAB3AQAAtwEAAHcBAAB3AQAAtgEAALgBAAC4AQAAdwEAALYBAAC3AQAAtwEAALYBAAC2AQAAdwEAALcBAAC4AQAAuAEAAHcBAAB3AQAAdwEAAHcBAAC4AQAAuAEAALYBAAC2AQAAuAEAALYBAAB3AQAAtgEAALcBAAB3AQAAdwEAALYBAAC4AQAAtgEAALcBAAC2AQAAtwEAALYBAAB3AQAAuAEAALgBAAB3AQAAtgEAAHcBAAC3AQAAuAEAALYBAAB3AQAAtgEAALgBAAC4AQAAtwEAAHcBAAC4AQAAdwEAALYBAAC4AQAAtwEAALcBAAC4AQAAtgEAALcBAAB3AQAAtgEAAHcBAAB3AQAAtgEAALgBAAC3AQAAdwEAALgBAAC2AQAAdwEAALYBAAC3AQAAtgEAALgBAAC3AQAAtwEAALgBAAC4AQAAdwEAALcBAAC2AQAAtgEAALcBAAB3AQAAtwEAALYBAAB3AQAAtwEAALgBAAC3AQAAtgEAALYBAAC2AQAAuAEAAHcBAAC4AQAAdwEAALgBAAC3AQAAtwEAALgBAAB3AQAAtgEAALgBAAC3AQAAtgEAAHcBAAC4AQAAtwEAAHcBAAC3AQAAtwEAALgBAAC2AQAAdwEAALcBAAC4AQAAdwEAALcBAAC4AQAA
+  </data>
+ </layer>
+ <layer id="9" name="ground-2" width="36" height="36">
+  <properties>
+   <property name="background" type="bool" value="true"/>
+   <property name="bridge" type="bool" value="false"/>
+   <property name="collision" type="bool" value="false"/>
+   <property name="foreground" type="bool" value="false"/>
+   <property name="impasse" type="bool" value="false"/>
+   <property name="light-map" type="bool" value="false"/>
+   <property name="reference" type="bool" value="false"/>
+   <property name="spawner" type="bool" value="false"/>
+   <property name="traversable" type="bool" value="true"/>
+  </properties>
+  <data encoding="base64">
+   AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmgMAAAAAAACcAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACaAwAAAAAAAJwDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJwDAAAAAAAAmgMAAAAAAACcAwAAugMAALsDAAC8AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6AwAAuwMAALwDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJoDAAAAAAAAuwMAALwDAAAAAAAAugMAALsDAAC8AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJoDAAAAAAAAnAMAAAAAAAAAAAAAAAAAALoDAAC7AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACaAwAAAAAAAJwDAAAAAAAAAAAAAAAAAACaAwAAAAAAAJwDAAAAAAAAAAAAAJoDAAAAAAAAnAMAALoDAAC7AwAAvAMAAJoDAAAAAAAAnAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6AwAAuwMAALwDAACaAwAAAAAAAJwDAAC6AwAAuwMAALwDAAAAAAAAAAAAALoDAAC7AwAAvAMAAAAAAAAAAAAAAAAAALoDAAC7AwAAvAMAAAAAAAAAAAAAAAAAAAAAAACaAwAAAAAAAJwDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6AwAAuwMAALwDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6AwAAuwMAALwDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACaAwAAAAAAAJwDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmgMAAAAAAACcAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6AwAAuwMAALwDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAugMAALsDAAC8AwAAmgMAAAAAAACcAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAugMAALsDAAC8AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJoDAAAAAAAAnAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmgMAAAAAAACcAwAAAAAAALoDAAC7AwAAvAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmgMAAAAAAACcAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFABAABRAQAA9wAAAFEBAABSAQAAAAAAAAAAAAAAAAAAugMAALsDAAC8AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAugMAALsDAAC8AwAAAAAAAAAAAACaAwAAAAAAAJwDAAAAAAAAAAAAAHABAABxAQAAcQEAAHEBAAByAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6AwAAuwMAALwDAAAAAAAAAAAAAHABAABxAQAAcQEAAHEBAAByAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAQAA9wAAAFIBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUQEAAFEBAABRAQAAUQEAAFEBAABRAQAAUQEAADIBAABxAQAAcQEAAHEBAAAxAQAAUQEAAFEBAABRAQAAUQEAAFEBAABRAQAAUQEAAFEBAABRAQAAUQEAAFEBAABRAQAAUQEAAFEBAAAyAQAAcQEAADEBAABRAQAAUQEAAFEBAABRAQAAUQEAAFEBAABRAQAAcQEAAHEBAABxAQAAcQEAAHEBAABxAQAAcQEAAHEBAABxAQAAcQEAAHEBAABxAQAAcQEAAHEBAABxAQAAcQEAAHEBAABxAQAAcQEAAHEBAABxAQAAcQEAAHEBAABxAQAAcQEAAHEBAABxAQAAcQEAAHEBAABxAQAAcQEAAHEBAABxAQAAcQEAAHEBAABxAQAAkQEAAJEBAACRAQAAkQEAAJEBAACRAQAAkQEAAJEBAACRAQAAkQEAAJEBAACRAQAAkQEAAJEBAACRAQAAkQEAAJEBAACRAQAAkQEAAJEBAACRAQAAkQEAAJEBAACRAQAAkQEAAJEBAACRAQAAkQEAAJEBAACRAQAAkQEAAJEBAACRAQAAkQEAAJEBAACRAQAAAAAAAAAAAAAAAAAAmgMAAAAAAACcAwAAAAAAAAAAAACaAwAAAAAAAJwDAAAAAAAAAAAAAAAAAAAAAAAAmgMAAAAAAACcAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACaAwAAAAAAAJwDAAAAAAAAmgMAAAAAAACcAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAugMAALsDAAC8AwAAAAAAAAAAAAC6AwAAuwMAALwDAACaAwAAAAAAAJwDAAAAAAAAugMAALsDAAC8AwAAAAAAAAAAAAAAAAAAmgMAAAAAAACcAwAAAAAAAAAAAAC6AwAAuwMAALwDAAAAAAAAugMAALsDAAC8AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6AwAAuwMAALwDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAugMAALsDAAC8AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmgMAAAAAAACcAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAugMAALsDAAC8AwAAAAAAAAAAAAAAAAAAAAAAAAAAAABNAwAAAAAAAAAAAAAAAAAAAAAAAAAAAACaAwAAAAAAAJwDAAAAAAAAmgMAAAAAAACcAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmgMAAAAAAACcAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJoDAAAAAAAAnAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6AwAAuwMAALwDAAAAAAAAugMAALsDAAC8AwAAAAAAAAAAAAAAAAAAmgMAAAAAAACcAwAAugMAALsDAAC8AwAAAAAAAAAAAACaAwAAAAAAAJwDAAAAAAAAAAAAAAAAAAAAAAAAAAAAALoDAAC7AwAAvAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAugMAALsDAAC8AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6AwAAuwMAALwDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJoDAAAAAAAAnAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmgMAAAAAAACcAwAAAAAAAAAAAAAAAAAAAAAAAAAAAACaAwAAAAAAAJwDAAAAAAAAAAAAAAAAAAAAAAAAAAAAALoDAAC7AwAAvAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAugMAALsDAAC8AwAAAAAAAAAAAACaAwAAAAAAAJwDAAC6AwAAuwMAALwDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6AwAAuwMAALwDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJoDAAAAAAAAnAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmgMAAAAAAACcAwAAAAAAAAAAAAAAAAAAmgMAAAAAAACcAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALoDAAC7AwAAvAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAugMAALsDAAC8AwAAmgMAAAAAAACcAwAAugMAALsDAAC8AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmgMAAAAAAACcAwAAAAAAAAAAAAAAAAAAugMAALsDAAC8AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmgMAAAAAAACcAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAugMAALsDAAC8AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACaAwAAAAAAAJwDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAugMAALsDAAC8AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6AwAAuwMAALwDAACaAwAAAAAAAJwDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJoDAAAAAAAAnAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACaAwAAAAAAAJwDAAAAAAAAAAAAAAAAAAAAAAAAmgMAAAAAAACcAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6AwAAuwMAALwDAAAAAAAAAAAAAAAAAAAAAAAAAAAAALoDAAC7AwAAvAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6AwAAuwMAALwDAAAAAAAAmgMAAAAAAACcAwAAugMAALsDAAC8AwAA
+  </data>
+ </layer>
+ <layer id="13" name="ground-3" width="36" height="36">
+  <properties>
+   <property name="background" type="bool" value="true"/>
+   <property name="bridge" type="bool" value="false"/>
+   <property name="collision" type="bool" value="false"/>
+   <property name="foreground" type="bool" value="false"/>
+   <property name="impasse" type="bool" value="false"/>
+   <property name="light-map" type="bool" value="false"/>
+   <property name="reference" type="bool" value="false"/>
+   <property name="spawner" type="bool" value="false"/>
+   <property name="traversable" type="bool" value="true"/>
+  </properties>
+  <data encoding="base64">
+   AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ0DAAAAAAAAnwMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAL0DAAC+AwAAvwMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+  </data>
+ </layer>
+ <layer id="5" name="collision-1" width="36" height="36">
+  <properties>
+   <property name="background" type="bool" value="true"/>
+   <property name="bridge" type="bool" value="false"/>
+   <property name="collision" type="bool" value="true"/>
+   <property name="foreground" type="bool" value="false"/>
+   <property name="impasse" type="bool" value="false"/>
+   <property name="light-map" type="bool" value="false"/>
+   <property name="reference" type="bool" value="false"/>
+   <property name="spawner" type="bool" value="false"/>
+   <property name="traversable" type="bool" value="false"/>
+  </properties>
+  <data encoding="base64">
+   AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAngMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAngMAAAAAAAAAAAAAAAAAAJ4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACeAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACeAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAngMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmwMAAAAAAAAAAAAAAAAAAAAAAACeAwAAAAAAAAAAAAAAAAAAAAAAAAAAAACeAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAngMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAngMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACRAAAAkgAAAJIAAACSAAAAkgAAAJIAAACSAAAAkgAAAJMAAAAAAAAAngMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACRAAAAkgAAAJIAAACSAAAAkgAAAJIAAACSAAAAkgAAAJMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ4DAAAAAAAAAAAAAAAAAACRAAAAkgAAAJIAAACSAAAAkgAAAJIAAACSAAAAkgAAAJMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACRAAAAkgAAAJIAAACSAAAAkgAAAJIAAACSAAAAkgAAAJMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACRAAAAkgAAAJIAAACSAAAAkgAAAJIAAACSAAAAkgAAAJMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACbAwAAAAAAAAAAAACRAAAAkgAAAJIAAACSAAAAkgAAAJIAAACSAAAAkgAAAJMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACRAAAAkgAAAJIAAACSAAAAiwAAAJIAAACSAAAAkgAAAJMAAAAAAAAAAAAAAJ4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACRAAAAkgAAAJIAAACSAAAAkgAAAJIAAACSAAAAkgAAAJMAAAAAAAAAAAAAAJ4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACqAAAAuwAAALsAAAC7AAAAAAAAALsAAAC7AAAAuwAAAKwAAAAAAAAAAAAAADQDAAA1AwAAAAAAAAAAAAAAAAAAAAAAAAAAAACRAAAAkgAAAJIAAACSAAAAkgAAAJIAAACSAAAAkgAAAJMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAngMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACRAAAAkgAAAJIAAACSAAAAiwAAAJIAAACSAAAAkgAAAJMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABkFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAUAABUFAAAAAAAAAAAAAAAAAAAAAAAAGQUAAAAAAACbAwAAAAAAAAAAAACqAAAAuwAAALsAAAC7AAAAAAAAALsAAAC7AAAAuwAAAKwAAAAAAAAAAAAAABkFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABkFAAAAAAAAAAAAAJ4DAAAAAAAAAAAAAAAAAAAAAAAAngMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ4DAAAAAAAAGQUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmwMAAAAAAAAAAAAAAAAAAJ4DAAAAAAAAAAAAABkFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAngMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAtAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAngMAAAAAAAAAAAAAAAAAAJ4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACeAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAngMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACeAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAngMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAngMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACeAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAngMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAngMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACeAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAngMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ4DAAAAAAAAAAAAAAAAAAAAAAAA
+  </data>
+ </layer>
+ <layer id="16" name="impasse" width="36" height="36">
+  <properties>
+   <property name="background" type="bool" value="true"/>
+   <property name="bridge" type="bool" value="false"/>
+   <property name="collision" type="bool" value="false"/>
+   <property name="foreground" type="bool" value="false"/>
+   <property name="impasse" type="bool" value="true"/>
+   <property name="light-map" type="bool" value="false"/>
+   <property name="reference" type="bool" value="false"/>
+   <property name="spawner" type="bool" value="false"/>
+   <property name="traversable" type="bool" value="false"/>
+  </properties>
+  <data encoding="base64">
+   AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABqAgAAawIAAGsCAABrAgAAbAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACKAgAAiwIAAIsCAACLAgAASwIAAGwCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACKAgAAiwIAAIsCAACLAgAAiwIAAEsCAABrAgAAawIAAGwCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAagIAAGsCAABMAgAAiwIAAIsCAACLAgAAiwIAAIsCAACLAgAAiwIAAIwCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAigIAAIsCAACLAgAAiwIAAIsCAACLAgAAiwIAAIsCAACLAgAAiwIAAIwCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAigIAAIsCAACLAgAAiwIAAIsCAACLAgAAiwIAAIsCAACLAgAAiwIAAIwCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABqAgAATAIAAIsCAACLAgAAiwIAAIsCAACLAgAAiwIAAIsCAACLAgAAiwIAAIwCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACKAgAAiwIAAIsCAACLAgAAiwIAAIsCAACLAgAAiwIAAIsCAACLAgAAiwIAAIwCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACKAgAAiwIAAIsCAACLAgAAiwIAAIsCAACLAgAAiwIAAIsCAACLAgAAiwIAAIwCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACqAgAALAIAAIsCAACLAgAAiwIAAIsCAACLAgAAiwIAAIsCAACLAgAAiwIAAIwCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAqgIAAKsCAAAsAgAAiwIAAIsCAACLAgAAiwIAAIsCAACLAgAAKwIAAKwCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACqAgAAqwIAACwCAACLAgAAiwIAAIsCAACLAgAAjAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKoCAACrAgAAqwIAAKsCAACrAgAArAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+  </data>
+ </layer>
+ <layer id="8" name="collision-2" width="36" height="36">
+  <properties>
+   <property name="background" type="bool" value="true"/>
+   <property name="bridge" type="bool" value="false"/>
+   <property name="collision" type="bool" value="true"/>
+   <property name="foreground" type="bool" value="false"/>
+   <property name="impasse" type="bool" value="false"/>
+   <property name="light-map" type="bool" value="false"/>
+   <property name="reference" type="bool" value="false"/>
+   <property name="spawner" type="bool" value="false"/>
+   <property name="traversable" type="bool" value="false"/>
+  </properties>
+  <data encoding="base64">
+   AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAASQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKQIAAAAAAAAAAAAA3QMAAAAAAAAAAAAAKQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAIAAAAAAAAAAAAA/QMAAAAAAAAAAAAAKAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASQIAAAAAAABeAgAAJgIAAIACAAAAAAAASQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKQIAAAAAAAAAAAAA3QMAAAAAAAAAAAAAKQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAIAAAAAAAAAAAAA/QMAAAAAAAAAAAAAKAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASQIAAAAAAAAAAAAAJgIAAAAAAAAAAAAASQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8wIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+  </data>
+ </layer>
+ <layer id="11" name="collision-3" width="36" height="36">
+  <properties>
+   <property name="background" type="bool" value="true"/>
+   <property name="bridge" type="bool" value="false"/>
+   <property name="collision" type="bool" value="true"/>
+   <property name="foreground" type="bool" value="false"/>
+   <property name="impasse" type="bool" value="false"/>
+   <property name="light-map" type="bool" value="false"/>
+   <property name="reference" type="bool" value="false"/>
+   <property name="spawner" type="bool" value="false"/>
+   <property name="traversable" type="bool" value="false"/>
+  </properties>
+  <data encoding="base64">
+   AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+  </data>
+ </layer>
+ <layer id="14" name="bridge" width="36" height="36">
+  <properties>
+   <property name="background" type="bool" value="true"/>
+   <property name="bridge" type="bool" value="true"/>
+   <property name="collision" type="bool" value="false"/>
+   <property name="foreground" type="bool" value="false"/>
+   <property name="impasse" type="bool" value="false"/>
+   <property name="light-map" type="bool" value="false"/>
+   <property name="reference" type="bool" value="false"/>
+   <property name="spawner" type="bool" value="false"/>
+   <property name="traversable" type="bool" value="false"/>
+  </properties>
+  <data encoding="base64">
+   AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHcDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABOAwBgbgMAoG4DAKBuAwCgbgMAoHcDAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+  </data>
+ </layer>
+ <layer id="4" name="top-1" width="36" height="36">
+  <properties>
+   <property name="background" type="bool" value="false"/>
+   <property name="bridge" type="bool" value="false"/>
+   <property name="collision" type="bool" value="false"/>
+   <property name="foreground" type="bool" value="true"/>
+   <property name="impasse" type="bool" value="false"/>
+   <property name="light-map" type="bool" value="false"/>
+   <property name="reference" type="bool" value="false"/>
+   <property name="spawner" type="bool" value="false"/>
+   <property name="traversable" type="bool" value="false"/>
+  </properties>
+  <data encoding="base64">
+   ewMAAAAAAAAAAAAAAAAAAHsDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB7AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB7AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgBQAAYQUAAGEFAABhBQAAYQUAAGEFAABhBQAAYQUAAGIFAAAAAAAAewMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAewMAAAAAAAAAAAAAAAAAAAAAAAB7AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAB7AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwBQAAcQUAAHEFAABxBQAAcQUAAHEFAABxBQAAcQUAAHIFAAAAAAAAAAAAAAAAAAAAAAAAewMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAewMAAAAAAABwBQAAcQUAAHEFAABxBQAAcQUAAHEFAABxBQAAcQUAAHIFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgBQAAYQUAAGEFAABhBQAAYQUAAGEFAABhBQAAYQUAAGIFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACABQAAgQUAAIEFAACBBQAAgQUAAIEFAACBBQAAgQUAAIIFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwBQAAcQUAAHEFAABxBQAAcQUAAHEFAABxBQAAcQUAAHIFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACKAAAAggAAAIIAAACCAAAAggAAAIIAAACCAAAAggAAAIwAAAAAAAAAewMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwBQAAcQUAAHEFAABxBQAAcQUAAHEFAABxBQAAcQUAAHIFAAAAAAAAAAAAAHsDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACABQAAgQUAAIEFAACBBQAAgQUAAIEFAACBBQAAgQUAAIIFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHsDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACKAAAAggAAAIIAAACCAAAAggAAAIIAAACCAAAAggAAAIwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB7AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHsDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHsDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQDAAAVAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMFAAAAAAAAewMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwUAAJwCAACdAgAAngIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMFAAAAAAAAAAAAABYFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEQUAABIFAAAAAAAAAAAAAAAAAAAAAAAAFgUAALwCAAC9AgAAvgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABYFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANwCAADdAgAA3gIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/AIAAAAAAAD+AgAAAAAAAAAAAAAAAAAAAAAAABMFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACcAgAAnQIAAJ4CAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMFAAAAAAAAAAAAABYFAAAAAAAAAAAAAHsDAAAAAAAAAAAAAAAAAAAAAAAAewMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHsDAAAAAAAAFgUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC8AgAAvQIAAL4CAAAAAAAAAAAAAH4DAAAAAAAAAAAAABYFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAewMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHsDAAAAAAAAAAAAAAAAAADcAgAA3QIAAN4CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHsDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0wIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAewMAAAAAAAAAAAAAAAAAAHsDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHsDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB7AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHsDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAewMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB7AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHsDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAewMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAewMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB7AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHsDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHsDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHsDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHsDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHsDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAewMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAewMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB7AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAewMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHsDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHsDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAewMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB7AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+  </data>
+ </layer>
+ <layer id="10" name="top-2" width="36" height="36">
+  <properties>
+   <property name="background" type="bool" value="false"/>
+   <property name="bridge" type="bool" value="false"/>
+   <property name="collision" type="bool" value="false"/>
+   <property name="foreground" type="bool" value="true"/>
+   <property name="impasse" type="bool" value="false"/>
+   <property name="light-map" type="bool" value="false"/>
+   <property name="reference" type="bool" value="false"/>
+   <property name="spawner" type="bool" value="false"/>
+   <property name="traversable" type="bool" value="false"/>
+  </properties>
+  <data encoding="base64">
+   PQMAAD4DAAAAAAAAPAMAAD0DAAA+AwAAXAMAAF0DAABeAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8AgAA/QIAAP4CAAAAAAAAAAAAAAAAAAD5AgAA+gIAAPsCAABcAwAAXQMAAF4DAAD9AgAA/gIAABwDAAAdAwAAHgMAAPwCAAD9AgAA/gIAADwDAAA9AwAAXQMAAF4DAAAAAAAAXAMAAF0DAABeAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcAwAAHQMAAB4DAAD8AgAA/QIAAP4CAAAZAwAAGgMAABsDAAAAAAAAAAAAABwDAAAdAwAAHgMAADwDAAA9AwAAPgMAABwDAAAdAwAAHgMAAFwDAABdAwAAAAAAAAAAAAD8AgAA/QIAAP4CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8AwAAPQMAAD4DAAAcAwAAHQMAAB4DAAA5AwAAOgMAADsDAAAAAAAAAAAAADwDAAA9AwAAPgMAAFwDAABdAwAAXgMAADwDAAA9AwAAPgMAAAAAAAAAAAAAAAAAAAAAAAAcAwAAHQMAAB4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcAwAAXQMAAF4DAAA8AwAAPQMAAD4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFwDAABdAwAAXgMAAAAAAAAAAAAAAAAAAFwDAABdAwAAXgMAAAAAAAAAAAAAAAAAAAAAAAA8AwAAPQMAAD4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8AgAA/QIAAP4CAABcAwAAXQMAAF4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/AIAAP0CAAD+AgAAAAAAAAAAAABcAwAAXQMAAF4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcAwAAHQMAAB4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHAMAAB0DAAAeAwAA/AIAAP0CAAD+AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8AwAAPQMAAD4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPAMAAD0DAAA+AwAAHAMAAB0DAAAeAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcAwAAXQMAAF4DAAAAAAAAAAAAAPwCAAD9AgAA/gIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXAMAAF0DAABeAwAAPAMAAD0DAAA+AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/AIAAP0CAAD+AgAAAAAAABwDAAAdAwAAHgMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/AIAAP0CAAD+AgAAXAMAAF0DAABeAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHAMAAB0DAAAeAwAAAAAAADwDAAA9AwAAPgMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHAMAAB0DAAAeAwAAAAAAAAAAAAD8AgAA/QIAAP4CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPAMAAD0DAAA+AwAAAAAAAFwDAABdAwAAXgMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPAMAAD0DAAA+AwAAAAAAAAAAAAAcAwAAHQMAAB4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXAMAAF0DAABeAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXAMAAF0DAABeAwAAAAAAAAAAAAA8AwAAPQMAAD4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcAwAAXQMAAF4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/AIAAP0CAAD+AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/AIAAP0CAAD+AgAAAAAAAAAAAAD8AgAA/QIAAP4CAAAAAAAAAAAAAAAAAAAAAAAA/AIAAP0CAAD+AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHAMAAB0DAAAeAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHAMAAB0DAAAeAwAAAAAAAAAAAAAcAwAAHQMAAB4DAAD8AgAA/QIAAP4CAAAAAAAAHAMAAB0DAAAeAwAAAAAAAAAAAAAAAAAA/AIAAP0CAAD+AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPAMAAD0DAAA+AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPAMAAD0DAAA+AwAAAAAAAAAAAAA8AwAAPQMAAD4DAAAcAwAAHQMAAB4DAAAAAAAAPAMAAD0DAAA+AwAAAAAAAAAAAAAAAAAAHAMAAB0DAAAeAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXAMAAF0DAABeAwAAAAAAAAAAAAAAAAAA/AIAAP0CAAD+AgAAXAMAAF0DAABeAwAAAAAAAAAAAABcAwAAXQMAAF4DAAA8AwAAPQMAAD4DAAAAAAAAXAMAAF0DAABeAwAAAAAAAAAAAAAAAAAAPAMAAD0DAAA+AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHAMAAB0DAAAeAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcAwAAXQMAAF4DAAD8AgAA/QIAAP4CAAAAAAAA/AIAAP0CAAD+AgAAXAMAAF0DAABeAwAAAAAAAAAAAAAAAAAA/AIAAP0CAAD+AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPAMAAD0DAAA+AwAAAAAAAPwCAAD9AgAA/gIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcAwAAHQMAAB4DAAAAAAAAHAMAAB0DAAAeAwAAAAAAAAAAAAAAAAAA/AIAAP0CAAD+AgAAHAMAAB0DAAAeAwAAAAAAAAAAAAD8AgAA/QIAAP4CAAAAAAAAXAMAAF0DAABeAwAAAAAAABwDAAAdAwAAHgMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8AwAAPQMAAD4DAAAAAAAAPAMAAD0DAAA+AwAAAAAAAAAAAAAAAAAAHAMAAB0DAAAeAwAAPAMAAD0DAAA+AwAAAAAAAAAAAAAcAwAAHQMAAB4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDAAA9AwAAPgMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcAwAAXQMAAF4DAAAAAAAAXAMAAF0DAABeAwAAAAAAAAAAAAAAAAAAPAMAAD0DAAA+AwAAXAMAAF0DAABeAwAAAAAAAAAAAAA8AwAAPQMAAD4DAAAAAAAAAAAAAPwCAAD9AgAA/gIAAFwDAABdAwAAXgMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/AIAAP0CAAD+AgAAXAMAAF0DAABeAwAAAAAAAAAAAAD8AgAA/QIAAP4CAABcAwAAXQMAAF4DAAAAAAAAAAAAABwDAAAdAwAAHgMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHAMAAB0DAAAeAwAAAAAAAAAAAAD8AgAA/QIAAP4CAAAcAwAAHQMAAB4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDAAA9AwAAPgMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPAMAAD0DAAA+AwAAAAAAAAAAAAAcAwAAHQMAAB4DAAA8AwAAPQMAAD4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFwDAABdAwAAXgMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPwCAAD9AgAA/gIAAAAAAAAAAAAAXAMAAF0DAABeAwAAAAAAAAAAAAA8AwAAPQMAAD4DAABcAwAAXQMAAF4DAAAAAAAA/AIAAP0CAAD+AgAAAAAAAAAAAAAAAAAA/AIAAP0CAAD+AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwDAAAdAwAAHgMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcAwAAXQMAAF4DAAAAAAAAAAAAAAAAAAAAAAAAHAMAAB0DAAAeAwAA/AIAAP0CAAD+AgAAHAMAAB0DAAAeAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDAAA9AwAAPgMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/AIAAP0CAAD+AgAAPAMAAD0DAAA+AwAAHAMAAB0DAAAeAwAAPAMAAD0DAAA+AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFwDAABdAwAAXgMAAAAAAAAAAAAA/AIAAP0CAAD+AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHAMAAB0DAAAeAwAAXAMAAF0DAABeAwAAPAMAAD0DAAA+AwAAXAMAAF0DAABeAwAA/QIAAP4CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHAMAAB0DAAAeAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPAMAAD0DAAA+AwAAAAAAAAAAAAAAAAAAXAMAAF0DAABeAwAAAAAAAAAAAAAcAwAAHQMAAB4DAAD8AgAA/QIAAP4CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPwCAAD9AgAA/gIAAAAAAAAAAAAAPAMAAD0DAAA+AwAAAAAAAAAAAAD8AgAA/QIAAP4CAAAAAAAAXAMAAF0DAABeAwAA/AIAAP0CAAD+AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8AwAAPQMAAD4DAAAcAwAAHQMAAB4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwDAAAdAwAAHgMAAAAAAAAAAAAAXAMAAF0DAABeAwAAAAAAAAAAAAAcAwAAHQMAAB4DAAAAAAAA/AIAAP0CAAD+AgAAHAMAAB0DAAAeAwAAAAAAAAAAAAAAAAAAAAAAAAAAAABcAwAAXQMAAF4DAAA8AwAAPQMAAD4DAAD8AgAA/QIAAP4CAAAAAAAAAAAAADwDAAA9AwAAPgMAAAAAAAAAAAAAAAAAAPwCAAD9AgAA/gIAAAAAAAA8AwAAPQMAAD4DAAAAAAAAHAMAAB0DAAAeAwAAPAMAAD0DAAA+AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcAwAAXQMAAF4DAAAcAwAAHQMAAB4DAAAAAAAAAAAAAFwDAABdAwAAXgMAAPwCAAD9AgAA/gIAABwDAAAdAwAAHgMAAAAAAABcAwAAXQMAAF4DAAAAAAAAPAMAAD0DAAA+AwAAXAMAAF0DAABeAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8AwAAPQMAAD4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwDAAAdAwAAHgMAADwDAAA9AwAAPgMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXAMAAF0DAABeAwAAAAAAAAAAAAAAAAAA
+  </data>
+ </layer>
+ <objectgroup id="7" name="spawns">
+  <properties>
+   <property name="background" type="bool" value="false"/>
+   <property name="bridge" type="bool" value="false"/>
+   <property name="collision" type="bool" value="false"/>
+   <property name="foreground" type="bool" value="false"/>
+   <property name="impasse" type="bool" value="false"/>
+   <property name="light-map" type="bool" value="false"/>
+   <property name="reference" type="bool" value="false"/>
+   <property name="spawner" type="bool" value="true"/>
+   <property name="traversable" type="bool" value="false"/>
+  </properties>
+ </objectgroup>
+ <objectgroup id="12" name="lights">
+  <properties>
+   <property name="background" type="bool" value="false"/>
+   <property name="bridge" type="bool" value="false"/>
+   <property name="collision" type="bool" value="false"/>
+   <property name="foreground" type="bool" value="false"/>
+   <property name="impasse" type="bool" value="false"/>
+   <property name="light-map" type="bool" value="true"/>
+   <property name="reference" type="bool" value="false"/>
+   <property name="spawner" type="bool" value="false"/>
+   <property name="traversable" type="bool" value="false"/>
+  </properties>
+  <object id="4" x="288" y="288" width="32" height="32">
+   <properties>
+    <property name="brightness" type="float" value="8"/>
+    <property name="colour" type="color" value="#ffffb969"/>
+    <property name="dimming" type="bool" value="true"/>
+    <property name="flicker" type="float" value="0.05"/>
+    <property name="flicker-speed" type="float" value="2"/>
+    <property name="shadows" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="63" x="576" y="384" width="32" height="32">
+   <properties>
+    <property name="brightness" type="float" value="12"/>
+    <property name="colour" type="color" value="#c8ffc800"/>
+    <property name="dimming" type="bool" value="true"/>
+    <property name="shadows" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="103" x="576" y="512" width="32" height="32">
+   <properties>
+    <property name="brightness" type="float" value="12"/>
+    <property name="colour" type="color" value="#c8ffc800"/>
+    <property name="dimming" type="bool" value="true"/>
+    <property name="shadows" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="104" x="1088" y="384" width="32" height="32">
+   <properties>
+    <property name="brightness" type="float" value="12"/>
+    <property name="colour" type="color" value="#c8ffc800"/>
+    <property name="dimming" type="bool" value="true"/>
+    <property name="shadows" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="105" x="1088" y="512" width="32" height="32">
+   <properties>
+    <property name="brightness" type="float" value="12"/>
+    <property name="colour" type="color" value="#c8ffc800"/>
+    <property name="dimming" type="bool" value="true"/>
+    <property name="shadows" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="284" x="32" y="384" width="32" height="32">
+   <properties>
+    <property name="brightness" type="float" value="12"/>
+    <property name="colour" type="color" value="#c8ffc800"/>
+    <property name="dimming" type="bool" value="true"/>
+    <property name="shadows" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="285" x="32" y="512" width="32" height="32">
+   <properties>
+    <property name="brightness" type="float" value="12"/>
+    <property name="colour" type="color" value="#c8ffc800"/>
+    <property name="dimming" type="bool" value="true"/>
+    <property name="shadows" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="286" x="864" y="352" width="32" height="32">
+   <properties>
+    <property name="brightness" type="float" value="8"/>
+    <property name="colour" type="color" value="#ffffb969"/>
+    <property name="dimming" type="bool" value="true"/>
+    <property name="flicker" type="float" value="0.05"/>
+    <property name="flicker-speed" type="float" value="2"/>
+    <property name="shadows" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="287" x="256" y="640" width="32" height="32">
+   <properties>
+    <property name="brightness" type="float" value="16"/>
+    <property name="colour" type="color" value="#ff00aa00"/>
+    <property name="dimming" type="bool" value="true"/>
+    <property name="shadows" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="291" x="418" y="441" width="4" height="3">
+   <properties>
+    <property name="brightness" type="float" value="1"/>
+    <property name="colour" type="color" value="#ffff0000"/>
+    <property name="dimming" type="bool" value="true"/>
+    <property name="flicker" type="float" value="0.25"/>
+    <property name="flicker-speed" type="float" value="1"/>
+    <property name="shadows" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="292" x="406" y="441" width="4" height="3">
+   <properties>
+    <property name="brightness" type="float" value="1"/>
+    <property name="colour" type="color" value="#ffff0000"/>
+    <property name="dimming" type="bool" value="true"/>
+    <property name="flicker" type="float" value="0.25"/>
+    <property name="flicker-speed" type="float" value="1"/>
+    <property name="shadows" type="bool" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="15" name="reference-points">
+  <properties>
+   <property name="background" type="bool" value="false"/>
+   <property name="bridge" type="bool" value="false"/>
+   <property name="collision" type="bool" value="false"/>
+   <property name="foreground" type="bool" value="false"/>
+   <property name="impasse" type="bool" value="false"/>
+   <property name="light-map" type="bool" value="false"/>
+   <property name="reference" type="bool" value="true"/>
+   <property name="spawner" type="bool" value="false"/>
+   <property name="traversable" type="bool" value="false"/>
+  </properties>
+  <object id="264" name="player-spawn" x="288" y="448" width="32" height="32">
+   <properties>
+    <property name="shadows" type="bool" value="false"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

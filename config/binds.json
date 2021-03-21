@@ -1,0 +1,12 @@
+{
+  "up": 51,
+  "left": 29,
+  "down": 47,
+  "right": 32,
+  "sprint": 59,
+  "attack": -1,
+  "interact": 33,
+  "take-screenshot": 254,
+  "open-debug-menu": 255,
+  "inspect": 129
+}

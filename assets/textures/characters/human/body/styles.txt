@@ -1,0 +1,7 @@
+Dark Elf,darkelf
+Moon Elf,darkelf2
+Drake,drake
+Human,human
+Skeleton,skeleton
+Orc,orc
+Undead,undead

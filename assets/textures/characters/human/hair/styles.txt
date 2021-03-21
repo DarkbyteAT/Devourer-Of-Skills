@@ -1,0 +1,27 @@
+Bangs,bangs
+Long Bangs,bangslong
+Messy Bangs,bangslong2
+Short Bangs,bangsshort
+Bedhead,bedhead
+Afro,jewfro
+Long,long
+Longhawk,longhawk
+Long Knot,longknot
+Loose,loose
+Messy,messy1
+Messier,messy2
+Page,page
+Squire,page2
+Parted,parted
+Pixie,pixie
+Plain,plain
+Ponytail,ponytail
+Pigtails,ponytail2
+Princess,princess
+Shorthawk,shorthawk
+Short Knot,shortknot
+Right Shoulder Sweep,shoulderr
+Left Shoulder Sweep,shoulderl
+Swoop,swoop
+Longer,xlong
+Longer Knot,xlongknot
