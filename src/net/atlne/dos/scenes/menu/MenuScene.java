@@ -48,8 +48,8 @@ public class MenuScene extends Scene {
 			@Override
 			public void changed(ChangeEvent e, Actor actor) {
 				//addActor(characterSelectionWindow);
-				Core.scenes.popScene();
-				Core.scenes.pushScene(new GameScene());
+				Core.getScenes().popScene();
+				Core.getScenes().pushScene(new GameScene());
 				dispose();
 			}
 		});
@@ -88,7 +88,7 @@ public class MenuScene extends Scene {
 	/**Draws the title text at the top of the screen.*/
 	@Override
 	public void draw() {
-		Core.audio.playMusic("menu");
+		Core.getAudio().playMusic("menu");
 		super.draw();
 	}
 	

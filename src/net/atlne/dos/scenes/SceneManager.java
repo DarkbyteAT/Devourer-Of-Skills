@@ -71,7 +71,7 @@ public class SceneManager implements Disposable {
 			Scene scene = tempStack.pop();
 			scene.getBatch().setProjectionMatrix(scene.getCamera().combined);
 			scene.getCamera().update();
-			Core.input.setInputScene(scene);
+			Core.getInput().setInputScene(scene);
 			scene.act();
 			scene.draw();
 		}
@@ -80,7 +80,7 @@ public class SceneManager implements Disposable {
 		if(errorSceneActive)
 			errorScene.draw();
 		/**Resets input polling restrictions.*/
-		Core.input.resetInputScene();
+		Core.getInput().resetInputScene();
 	}
 	
 	/**Resizes all scenes in the game.*/

@@ -6,10 +6,10 @@ stab-up, 0.5, 4, 0, 7, false
 stab-left, 0.5, 5, 0, 7, false
 stab-down, 0.5, 6, 0, 7, false
 stab-right, 0.5, 7, 0, 7, false
-walk-up, 0.5, 8, 0, 8, false
-walk-left, 0.5, 9, 0, 8, false
-walk-down, 0.5, 10, 0, 8, false
-walk-right, 0.5, 11, 0, 8, false
+move-up, 0.5, 8, 0, 8, false
+move-left, 0.5, 9, 0, 8, false
+move-down, 0.5, 10, 0, 8, false
+move-right, 0.5, 11, 0, 8, false
 idle-up, 0.5, 8, 0, 0, false
 idle-left, 0.5, 9, 0, 0, false
 idle-down, 0.5, 10, 0, 0, false

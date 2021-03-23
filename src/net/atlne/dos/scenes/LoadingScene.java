@@ -19,7 +19,7 @@ public class LoadingScene extends Scene {
 	
 	public LoadingScene() {
 		super(false);
-		Gdx.graphics.setCursor(Core.graphics.getTextures().getCursor("assets/textures/cursors/standard.png", 0, 0));
+		Gdx.graphics.setCursor(Core.getGraphics().getTextures().getCursor("assets/textures/cursors/standard.png", 0, 0));
 	}
 	
 	/**Draws the loading screen.*/
@@ -29,7 +29,7 @@ public class LoadingScene extends Scene {
 		
 		/**Only renders the logo if the max font size is greater than 0.*/
 		for(int size = 1; size <= maxLoadedSize && maxLoadedSize >= 1; size++) {
-			BitmapFont font = Core.graphics.getFonts().get(size);
+			BitmapFont font = Core.getGraphics().getFonts().get(size);
 			/**Renders the logo text in the centre of the scene with the current largest loaded font size.*/
 			font.draw(batch, LOADING_TEXT,
 					(getWidth() - FontLoader.getWidth(font, LOADING_TEXT)) / 2,
@@ -38,7 +38,7 @@ public class LoadingScene extends Scene {
 		
 		/**Renders the appropriate loading flag if the text has finished loading.*/
 		if(maxLoadedSize == FontLoader.MAX_SIZE) {
-			BitmapFont infoFont = Core.graphics.getFonts().get(32);
+			BitmapFont infoFont = Core.getGraphics().getFonts().get(32);
 			
 			if(!physicsShapesLoaded) {
 				infoFont.draw(batch, "Loading physics engine...",
@@ -55,14 +55,14 @@ public class LoadingScene extends Scene {
 	public void act() {
 		/**Loads fonts if necessary, else switches scene to the menu scene.*/
 		if(maxLoadedSize < FontLoader.MAX_SIZE) {
-			Core.graphics.getFonts().generate(maxLoadedSize++);
+			Core.getGraphics().getFonts().generate(maxLoadedSize++);
 		} else {
 			if(!physicsShapesLoaded) {
-				physicsShapesLoaded = Core.physicsShapes.generate();
+				physicsShapesLoaded = Core.getPhysicsShapes().generate();
 			} else {
-				Core.audio.playSoundEffect("load");
-				Core.scenes.popScene();
-				Core.scenes.pushScene(new MenuScene());
+				Core.getAudio().playSoundEffect("load");
+				Core.getScenes().popScene();
+				Core.getScenes().pushScene(new MenuScene());
 				dispose();
 			}
 		}

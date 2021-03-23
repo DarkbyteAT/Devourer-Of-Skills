@@ -34,7 +34,7 @@ public class AudioHelper implements Disposable {
 			Gdx.files.local("config/volume.json")
 				.writeString(Gdx.files.internal("net/atlne/dos/audio/default-volume.json").readString(), false);
 		} else {
-			ArrayList<Float> volumes = Core.json.get("config/volume.json", new TypeToken<ArrayList<Float>>(){}.getType());
+			ArrayList<Float> volumes = Core.getJson().get("config/volume.json", new TypeToken<ArrayList<Float>>(){}.getType());
 			masterVolume = volumes.get(0);
 			musicVolume = volumes.get(1);
 			sfxVolume = volumes.get(2);
@@ -46,7 +46,7 @@ public class AudioHelper implements Disposable {
 	public void dispose() {
 		if(!Gdx.files.local("config").exists())
 			Gdx.files.local("config").mkdirs();
-		Core.json.set("config/volume.json", Arrays.asList(masterVolume, musicVolume, sfxVolume));
+		Core.getJson().set("config/volume.json", Arrays.asList(masterVolume, musicVolume, sfxVolume));
 		
 		/**Iterates over each music track.*/
 		for(Music m : music.values())

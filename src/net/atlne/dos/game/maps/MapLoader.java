@@ -1,4 +1,4 @@
-package net.atlne.dos.maps;
+package net.atlne.dos.game.maps;
 
 import java.util.concurrent.ConcurrentHashMap;
 

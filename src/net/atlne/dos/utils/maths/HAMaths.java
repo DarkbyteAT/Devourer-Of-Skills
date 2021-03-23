@@ -11,6 +11,8 @@ public class HAMaths {
 	
 	/**e^-1*/
 	public static final float E_INVERSE = (float) (1 / Math.E);
+	/**1/sqrt(2pi)*/
+	public static final float ROOT_2_PI = (float) Math.sqrt(2 * Math.PI);
 	
 	/**Credit to Riven: http://www.java-gaming.org/topics/extremely-fast-sine-cosine/36469/view.html*/
 	public static class TrigonometryUtils {
@@ -57,6 +59,16 @@ public class HAMaths {
 		/**Outputs a random Gaussian distributed number.*/
 		public static float randomGaussian() {
 			return (float) new Random().nextGaussian();
+		}
+		
+		/**Returns the value mapped onto a normal distribution curve.
+		 * 
+		 * @param x - The input to the function.
+		 * @param u - The "mu" parameter in the normal distribution curve.
+		 * @param s - The "sigma" parameter in the normal distribution curve.*/
+		public static float normal(float x, float u, float s) {
+			float exponent = (x - u) / s;
+			return (float) (-0.5 * Math.exp(exponent * exponent)) / (s * ROOT_2_PI);
 		}
 	}
 	

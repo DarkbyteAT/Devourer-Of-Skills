@@ -30,7 +30,7 @@ public class PauseScene extends Scene {
 	
 	public PauseScene() {
 		super(true);
-		Gdx.graphics.setCursor(Core.graphics.getTextures().getCursor("assets/textures/cursors/standard.png", 0, 0));
+		Gdx.graphics.setCursor(Core.getGraphics().getTextures().getCursor("assets/textures/cursors/standard.png", 0, 0));
 		title = new SceneTitle(TITLE);
 		overlay = TextureLoader.generateRectangle(1, 1, Color.BLACK.cpy());
 		addActor(title);
@@ -62,13 +62,13 @@ public class PauseScene extends Scene {
 		super.act();
 		alpha = InterpolationUtils.lirp(exiting ? TARGET_ALPHA : 0, alpha, exiting ? 0 : TARGET_ALPHA, 0.15f);
 		
-		if(Core.input.keyJustPressed(Keys.ESCAPE))
+		if(Core.getInput().keyJustPressed(Keys.ESCAPE))
 			exiting = true;
 		
 		if(exiting && alpha <= 0) {
-			Gdx.graphics.setCursor(Core.graphics.getTextures().getCursor("assets/textures/cursors/crosshair.png", 16, 16));
+			Gdx.graphics.setCursor(Core.getGraphics().getTextures().getCursor("assets/textures/cursors/crosshair.png", 16, 16));
 			exiting = false;
-			Core.scenes.popScene();
+			Core.getScenes().popScene();
 			dispose();
 		}
 	}

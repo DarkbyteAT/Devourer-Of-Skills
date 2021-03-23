@@ -1,4 +1,4 @@
-package net.atlne.dos.maps.objects;
+package net.atlne.dos.game.maps.objects;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.maps.MapProperties;
@@ -6,8 +6,8 @@ import com.badlogic.gdx.maps.objects.RectangleMapObject;
 import com.badlogic.gdx.math.Vector2;
 
 import box2dLight.PointLight;
+import net.atlne.dos.game.maps.rooms.Room;
 import net.atlne.dos.graphics.GraphicsManager;
-import net.atlne.dos.maps.Room;
 import net.atlne.dos.utils.maths.HAMaths;
 
 public class LightSource {

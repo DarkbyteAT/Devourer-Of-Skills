@@ -39,7 +39,7 @@ public class SpriteSheet {
 		this.textureLocation = textureLocation;
 		this.spriteWidth = spriteWidth;
 		this.spriteHeight = spriteHeight;
-		this.texture = Core.graphics.getTextures().get(textureLocation);
+		this.texture = Core.getGraphics().getTextures().get(textureLocation);
 		/**Splits the texture into the 2D array.*/
 		sprites = new TextureRegion(texture).split(spriteWidth, spriteHeight);
 	}
@@ -57,7 +57,7 @@ public class SpriteSheet {
 		/**Gets the texture location from the first line.*/
 		this.textureLocation = lines[0].trim();
 		/**Loads the texture from the texture location.*/
-		this.texture = Core.graphics.getTextures().get(textureLocation);
+		this.texture = Core.getGraphics().getTextures().get(textureLocation);
 			
 		/**Takes the width and height to be stored in the second and third lines respectively.*/
 		/**Parses both back into integers.*/
@@ -102,7 +102,7 @@ public class SpriteSheet {
 		/**Gets the texture location from the first line.*/
 		this.textureLocation = lines[0].trim();
 		/**Loads the texture from the texture location.*/
-		this.texture = Core.graphics.getTextures().get(textureLocation);
+		this.texture = Core.getGraphics().getTextures().get(textureLocation);
 			
 		/**Takes the width and height to be stored in the second and third lines respectively.*/
 		/**Parses both back into integers.*/

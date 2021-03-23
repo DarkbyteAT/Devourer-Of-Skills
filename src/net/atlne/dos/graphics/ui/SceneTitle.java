@@ -35,10 +35,10 @@ public class SceneTitle extends Actor {
 	/**Updates the title font size to reflect the change in screen size.*/
 	public void resize(float width, float height) {
 		fontSize = FontLoader.MAX_SIZE;
-		while((FontLoader.getWidth(Core.graphics.getFonts().get(fontSize), text) > width
-				|| FontLoader.getHeight(Core.graphics.getFonts().get(fontSize), text) > height)
+		while((FontLoader.getWidth(Core.getGraphics().getFonts().get(fontSize), text) > width
+				|| FontLoader.getHeight(Core.getGraphics().getFonts().get(fontSize), text) > height)
 				&& fontSize > 1)
 			fontSize--;
-		font = Core.graphics.getFonts().get(fontSize);
+		font = Core.getGraphics().getFonts().get(fontSize);
 	}
 }

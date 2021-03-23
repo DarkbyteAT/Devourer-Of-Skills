@@ -12,8 +12,8 @@ import com.badlogic.gdx.utils.Array;
 import com.kotcrab.vis.ui.widget.Tooltip;
 
 import net.atlne.dos.Core;
+import net.atlne.dos.game.maps.rooms.Room;
 import net.atlne.dos.graphics.GraphicsManager;
-import net.atlne.dos.maps.Room;
 import net.atlne.dos.scenes.Scene;
 import net.atlne.dos.scenes.game.GameScene;
 import net.atlne.dos.utils.debug.HADebug;
@@ -84,7 +84,7 @@ public class DebugOverlay extends Scene {
 		super.act();
 		
 		boolean oldActive = active;
-		active = Core.input.bindJustPressed("open-debug-menu") ? !active : active;
+		active = Core.getInput().bindJustPressed("open-debug-menu") ? !active : active;
 		if(active != oldActive)
 			recalculateRAMUsage();
 		
@@ -101,10 +101,10 @@ public class DebugOverlay extends Scene {
 			GameScene gameScene;
 			
 			/**Adds a tool-tip to about entity being inspected describing its data, if game in GameScene.*/
-			if(Core.input.bindPressed("inspect") &&
-					(gameScene = (GameScene) Core.scenes.peekScene(GameScene.class)) != null) {
+			if(Core.getInput().bindPressed("inspect") &&
+					(gameScene = (GameScene) Core.getScenes().peekScene(GameScene.class)) != null) {
 				Room room = gameScene.getRoom();
-				Vector2 mouseCoords = Core.input.getMouseCoords(room.getCamera()).scl(1 / GraphicsManager.PPM);
+				Vector2 mouseCoords = Core.getInput().getMouseCoords(room.getCamera()).scl(1 / GraphicsManager.PPM);
 				Array<Fixture> fixtures = new Array<Fixture>(room.getWorld().getFixtureCount());
 				room.getWorld().getFixtures(fixtures);
 				

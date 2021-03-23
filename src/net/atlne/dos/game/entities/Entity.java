@@ -1,12 +1,14 @@
-package net.atlne.dos.entities;
+package net.atlne.dos.game.entities;
 
 import java.util.Comparator;
 import java.util.LinkedHashMap;
+import java.util.Vector;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
+import net.atlne.dos.game.components.Component;
 import net.atlne.dos.graphics.GraphicsManager;
 import net.atlne.dos.graphics.textures.animation.AnimatedSprite;
 import net.atlne.dos.graphics.textures.animation.spritesheet.StateAnimatedSprite;
@@ -29,7 +31,9 @@ public class Entity {
 	/**Stores the body's direction.*/
 	protected Direction direction;
 	/**Stores the sprites for the body in rendering order.*/
-	protected LinkedHashMap<String, Sprite> sprites = new LinkedHashMap<String, Sprite>();
+	protected LinkedHashMap<String, Sprite> sprites = new LinkedHashMap<>();
+	/**Stores the components for the entity.*/
+	protected Vector<Component> components = new Vector<>();
 
 	@SafeVarargs
 	public Entity(String ID, String state, PhysicsObject body, Direction direction, Pair<String, Sprite>... sprites) {
@@ -69,6 +73,7 @@ public class Entity {
 	/**Updates the entity's internal clock and the body, as well as the sprites.*/
 	public void update() {
 		this.stateTime += Gdx.graphics.getDeltaTime();
+		components.forEach(Component::run);
 		syncSprites();
 		body.update();
 	}
@@ -118,6 +123,10 @@ public class Entity {
 	
 	public LinkedHashMap<String, Sprite> getSprites() {
 		return sprites;
+	}
+	
+	public Vector<Component> getComponents() {
+		return components;
 	}
 	
 	public void setState(String state) {

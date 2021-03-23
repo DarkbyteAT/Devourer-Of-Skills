@@ -61,19 +61,14 @@ public class GraphicsManager implements Disposable {
 	/**Takes a screenshot of the screen.
 	 * @throws IOException */
 	public void screenshot() {
-		byte[] pixels = ScreenUtils.getFrameBufferPixels(0, 0,
-				Gdx.graphics.getBackBufferWidth(), Gdx.graphics.getBackBufferHeight(), true);
-		/**This loop makes sure the whole screenshot is opaque and looks exactly like what the user is seeing.*/
-		for(int i = 4; i < pixels.length; i += 4)
-		    pixels[i - 1] = (byte) 255;
-		Pixmap pixmap = new Pixmap(Gdx.graphics.getBackBufferWidth(), Gdx.graphics.getBackBufferHeight(), Pixmap.Format.RGBA8888);
-		BufferUtils.copy(pixels, 0, pixmap.getPixels(), pixels.length);
 		/**Creates the folder if non-existent.*/
 		if(!new File("screenshots").exists())
 			new File("screenshots").mkdir();
+		TextureRegion screen = screen();
 		PixmapIO.writePNG(Gdx.files.local("screenshots/screenshot "
-				+ new SimpleDateFormat("yyyy-MM-dd HH mm ss").format(new Date()) + ".png"), pixmap);
-		pixmap.dispose();
+				+ new SimpleDateFormat("yyyy-MM-dd HH mm ss").format(new Date()) + ".png"),
+				screen.getTexture().getTextureData().consumePixmap());
+		screen.getTexture().dispose();
 	}
 	
 	/**Returns a TextureRegion of the screen.*/

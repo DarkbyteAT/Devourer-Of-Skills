@@ -1,4 +1,4 @@
-package net.atlne.dos.maps;
+package net.atlne.dos.game.maps.rooms;
 
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -20,10 +20,12 @@ import com.badlogic.gdx.physics.box2d.World;
 import box2dLight.PointLight;
 import box2dLight.RayHandler;
 import net.atlne.dos.Core;
-import net.atlne.dos.entities.Entity;
+import net.atlne.dos.game.entities.Entity;
+import net.atlne.dos.game.maps.Map;
+import net.atlne.dos.game.maps.objects.CollisionTile;
+import net.atlne.dos.game.maps.objects.LightSource;
 import net.atlne.dos.graphics.GraphicsManager;
-import net.atlne.dos.maps.objects.CollisionTile;
-import net.atlne.dos.maps.objects.LightSource;
+import net.atlne.dos.utils.Pair;
 import net.atlne.dos.utils.maths.HAMaths.TrigonometryUtils;
 import net.atlne.dos.utils.timing.NanoStopwatch;
 import net.atlne.dos.utils.timing.SecondStopwatch;
@@ -35,7 +37,7 @@ public class Room {
 	/**Stores the default physics tick rate for the game.*/
 	public static final float PHYSICS_TICK_RATE = 1f / 300f;
 	/**Stores the day length for rooms in real-time seconds.*/
-	public static final float DAY_LENGTH = 360;
+	public static final float DAY_LENGTH = 60;
 	
 	/**Stores the colour to draw grid lines in debug mode.*/
 	public static final Color GRID_COLOUR = new Color(0.3f, 0.3f, 0.3f, 0.3f);
@@ -68,7 +70,7 @@ public class Room {
 	/**Stores the time for the room in seconds.*/
 	protected float time;
 	/**Stores the ambient light level of the room.*/
-	protected float ambientLight;
+	protected Pair<Float, Color> ambientLight;
 	
 	/**Stores the last 10 TPS measurements.*/
 	protected int tps;
@@ -78,11 +80,12 @@ public class Room {
 	protected int tpsCount;
 
 	public Room(String mapName) {
-		this.map = Core.maps.get(mapName);
+		this.map = Core.getMaps().get(mapName);
 		this.mapRenderer = new OrthogonalTiledMapRenderer(map.getTileMap());
 		this.camera = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 		this.cameraPos = new Vector2();
 		this.rayHandler = new RayHandler(world);
+		RayHandler.useDiffuseLight(true);
 		this.gridRenderer = new ShapeRenderer();
 		this.debugRenderer = new Box2DDebugRenderer();
 		this.world = new World(new Vector2(0, 0), false);
@@ -139,20 +142,22 @@ public class Room {
 		
 		/**Draws the foreground layers of the map and handles lighting.*/
 		mapRenderer.render(map.getForeground());
-		rayHandler.setAmbientLight(ambientLight);
+		rayHandler.setAmbientLight(ambientLight.getKey(), ambientLight.getKey(), ambientLight.getKey(), ambientLight.getKey());
 		rayHandler.setCombinedMatrix(camera);
 		rayHandler.updateAndRender();
 		
 		/**Draws the hitboxes and grid if the debug overlay is open.*/
-		Vector3 originalCameraPos = camera.position.cpy();
-		camera.position.set(cameraPos.cpy(), 0);
-		camera.zoom /= GraphicsManager.PPM;
-		camera.update();
-		drawGrid();
-		debugRenderer.render(world, camera.combined);
-		camera.zoom *= GraphicsManager.PPM;
-		camera.position.set(originalCameraPos);
-		camera.update();
+		if(Core.getDebug().isActive()) {
+			Vector3 originalCameraPos = camera.position.cpy();
+			camera.position.set(cameraPos.cpy(), 0);
+			camera.zoom /= GraphicsManager.PPM;
+			camera.update();
+			drawGrid();
+			debugRenderer.render(world, camera.combined);
+			camera.zoom *= GraphicsManager.PPM;
+			camera.position.set(originalCameraPos);
+			camera.update();
+		}
 		
 		/**Resets the parameters to continue rendering on the batch normally.*/
 		camera.zoom = zoom;
@@ -189,9 +194,10 @@ public class Room {
 			LightSource source = lights.get(light);
 			light.setDistance(source.getRealBrightness());
 			if(source.isDimming())
-				light.setDistance(light.getDistance() * Math.max(map.getMinLight(), map.getMaxLight() - ambientLight));
+				light.setDistance(light.getDistance() * Math.max(map.getMinLight(), map.getMaxLight() - ambientLight.getKey()));
 			if(source.getFlicker() > 0)
-				light.setDistance(light.getDistance() + (source.getRealFlicker() * TrigonometryUtils.cos(source.getFlickerSpeed() * time)));
+				light.setDistance(light.getDistance() +
+						(source.getRealFlicker() * TrigonometryUtils.cos(source.getFlickerSpeed() * time)));
 		}
 		
 		/**Updates the physics step if necessary.*/
@@ -214,11 +220,11 @@ public class Room {
 		}
 		
 		/**Adds measurements to debug menu if open.*/
-		if(Core.debug.isActive()) {
-			Core.debug.getDebugPanes().put("TPS", Integer.toString(tps));
-			Core.debug.getDebugPanes().put("Camera Zoom", Float.toString(camera.zoom));
-			Core.debug.getDebugPanes().put("In-Game Time", Float.toString(time));
-			Core.debug.getDebugPanes().put("Ambient Light", Float.toString(ambientLight));
+		if(Core.getDebug().isActive()) {
+			Core.getDebug().getDebugPanes().put("TPS", Integer.toString(tps));
+			Core.getDebug().getDebugPanes().put("Camera Zoom", Float.toString(camera.zoom));
+			Core.getDebug().getDebugPanes().put("In-Game Time", Float.toString(time));
+			Core.getDebug().getDebugPanes().put("Ambient Light", Float.toString(ambientLight.getKey()));
 		}
 	}
 	
@@ -226,12 +232,15 @@ public class Room {
 		camera.setToOrtho(false, width, height);
 	}
 	
-	/**Calculates the ambient light level from the time.
+	/**Calculates the ambient light level and colour from the time.
 	 * Graph: https://www.desmos.com/calculator/ebobesjjac*/
-	public float getAmbientLight() {
-		return (float) Math.min(map.getMaxLight(),
+	//TODO: Implement actual colour changing stuff.
+	public Pair<Float, Color> getAmbientLight() {
+		float level = (float) Math.min(map.getMaxLight(),
 							Math.max(map.getMinLight(),
 									2 * map.getMaxLight() * TrigonometryUtils.cos((MathUtils.PI * time) / (DAY_LENGTH / 2))));
+		//Color colour = new Color();
+		return new Pair<>(level, Color.WHITE);
 	}
 
 	public Map getMap() {

@@ -37,17 +37,17 @@ public class ControlSettingsTab extends Tab {
 		contentTable = new VisTable();
 		scrollPane = new VisScrollPane(contentTable);
 		bindTable = new BindFindTable(this);
-		bindLabels = new VisLabel[Core.input.getBinds().size()];
+		bindLabels = new VisLabel[Core.getInput().getBinds().size()];
 		bindButtons = new VisTextButton[bindLabels.length];
 		
 		for(int i = 0; i < bindLabels.length; i++) {
 			final int INDEX = i;
-			int bind = Core.input.getBinds().get(Core.input.getBinds().keySet().toArray()[i]);
-			bindLabels[i] = new VisLabel(HAStrings.dashToCapitalisedDisplay(Core.input.getBinds().keySet().toArray()[i].toString()) + ": ");
+			int bind = Core.getInput().getBinds().get(Core.getInput().getBinds().keySet().toArray()[i]);
+			bindLabels[i] = new VisLabel(HAStrings.dashToCapitalisedDisplay(Core.getInput().getBinds().keySet().toArray()[i].toString()) + ": ");
 			
 			/**Determines the bind key from the bind code, if negative, converts to mouse buttons.
 			 * Sets the current bind key to this bind button's index.*/
-			bindButtons[i] = new VisTextButton(bind < 0 ? "MOUSE" + (-(bind + 1)) : Core.input.getKeyName(bind),
+			bindButtons[i] = new VisTextButton(bind < 0 ? "MOUSE" + (-(bind + 1)) : Core.getInput().getKeyName(bind),
 					new ChangeListener() {
 						@Override
 						public void changed(ChangeEvent e, Actor actor) {
@@ -108,17 +108,17 @@ class BindFindTable extends VisTable {
 		/**Checks if there's an active bind selection.*/
 		if(tab.getBindIndex() != -1) {
 			/**Checks for any pressed keys.*/
-			if(Core.input.getKeysJustPressed().size() > 0) {
-				tab.getBindButtons()[tab.getBindIndex()].setText(Core.input.getKeyName(Core.input.getKeysJustPressed().get(0)));
-				Core.input.getBinds().put(Core.input.getBinds().keySet().toArray()[tab.getBindIndex()].toString(),
-						Core.input.getKeysJustPressed().get(0));
+			if(Core.getInput().getKeysJustPressed().size() > 0) {
+				tab.getBindButtons()[tab.getBindIndex()].setText(Core.getInput().getKeyName(Core.getInput().getKeysJustPressed().get(0)));
+				Core.getInput().getBinds().put(Core.getInput().getBinds().keySet().toArray()[tab.getBindIndex()].toString(),
+						Core.getInput().getKeysJustPressed().get(0));
 				tab.setBindIndex(-1);
 			} else {
 				/**Checks for any pressed mouse buttons.*/
 				for(int i = 0; i < 16; i++) {
-					if(Core.input.justClicked(i)) {
+					if(Core.getInput().justClicked(i)) {
 						tab.getBindButtons()[tab.getBindIndex()].setText("MOUSE" + i);
-						Core.input.getBinds().put(Core.input.getBinds().keySet().toArray()[tab.getBindIndex()].toString(), -(i + 1));
+						Core.getInput().getBinds().put(Core.getInput().getBinds().keySet().toArray()[tab.getBindIndex()].toString(), -(i + 1));
 						tab.setBindIndex(-1);
 						break;
 					}

@@ -11,9 +11,9 @@ import com.kotcrab.vis.ui.util.dialog.Dialogs;
 
 import net.atlne.dos.audio.AudioHelper;
 import net.atlne.dos.debug.DebugOverlay;
+import net.atlne.dos.game.maps.MapLoader;
 import net.atlne.dos.graphics.GraphicsManager;
 import net.atlne.dos.input.InputHelper;
-import net.atlne.dos.maps.MapLoader;
 import net.atlne.dos.physics.PhysicsShapeLoader;
 import net.atlne.dos.scenes.LoadingScene;
 import net.atlne.dos.scenes.SceneManager;
@@ -39,21 +39,21 @@ public class Core extends Game {
 	}
 	
 	/**Stores the JSON manager for the game.*/
-	public static JsonManager json;
+	private static JsonManager json;
 	/**Stores the graphics manager for the game.*/
-	public static GraphicsManager graphics;
+	private static GraphicsManager graphics;
 	/**Stores the audio helper for the game.*/
-	public static AudioHelper audio;
+	private static AudioHelper audio;
 	/**Stores the input helper for the game.*/
-	public static InputHelper input;
+	private static InputHelper input;
 	/**Stores the physics shape loader for the game.*/
-	public static PhysicsShapeLoader physicsShapes;
+	private static PhysicsShapeLoader physicsShapes;
 	/**Stores the map loader for the game.*/
-	public static MapLoader maps;
+	private static MapLoader maps;
 	/**Stores the scene manager for the game.*/
-	public static SceneManager scenes;
+	private static SceneManager scenes;
 	/**Stores whether the debug overlay is active or not.*/
-	public static DebugOverlay debug;
+	private static DebugOverlay debug;
 
 	/**Run when window is opened, before render()*/
 	@Override
@@ -122,5 +122,37 @@ public class Core extends Game {
 		System.err.println(message);
 		exception.printStackTrace();
 		Dialogs.showErrorDialog(scenes.getErrorScene(), "[RED]" + message, exception);
+	}
+
+	public static JsonManager getJson() {
+		return json;
+	}
+
+	public static GraphicsManager getGraphics() {
+		return graphics;
+	}
+
+	public static AudioHelper getAudio() {
+		return audio;
+	}
+
+	public static InputHelper getInput() {
+		return input;
+	}
+
+	public static PhysicsShapeLoader getPhysicsShapes() {
+		return physicsShapes;
+	}
+
+	public static MapLoader getMaps() {
+		return maps;
+	}
+
+	public static SceneManager getScenes() {
+		return scenes;
+	}
+
+	public static DebugOverlay getDebug() {
+		return debug;
 	}
 }

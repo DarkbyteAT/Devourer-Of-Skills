@@ -1,4 +1,4 @@
-package net.atlne.dos.entities;
+package net.atlne.dos.game.entities;
 
 import com.badlogic.gdx.math.MathUtils;
 

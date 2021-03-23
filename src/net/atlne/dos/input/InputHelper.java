@@ -40,7 +40,7 @@ public class InputHelper implements Disposable {
 				.writeString(Gdx.files.internal("net/atlne/dos/input/default-binds.json").readString(), false);
 		}
 		
-		binds = Core.json.get("config/binds.json", new TypeToken<LinkedHashMap<String, Integer>>(){}.getType());
+		binds = Core.getJson().get("config/binds.json", new TypeToken<LinkedHashMap<String, Integer>>(){}.getType());
 		stringKeys = new HashMap<String, Integer>();
 		keyStrings = new HashMap<Integer, String>();
 		clickDuration = new int[16];
@@ -65,7 +65,7 @@ public class InputHelper implements Disposable {
 	public void dispose() {
 		if(!Gdx.files.local("config").exists())
 			Gdx.files.local("config").mkdirs();
-		Core.json.set("config/binds.json", binds);
+		Core.getJson().set("config/binds.json", binds);
 	}
 	
 	public void update() {

@@ -1,4 +1,4 @@
-package net.atlne.dos.maps.objects;
+package net.atlne.dos.game.maps.objects;
 
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
